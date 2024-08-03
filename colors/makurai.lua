@@ -1,1 +1,1 @@
-require("makurai-nvim")
+require("makurai")
