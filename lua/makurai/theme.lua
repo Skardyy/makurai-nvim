@@ -121,7 +121,7 @@ hi("Special", { fg = p.blue }) -- (*) Any special symbol
 -- SpecialComment { }, --   Special things inside a comment (e.g. '\n')
 -- Debug          { }, --   Debugging statements
 
-hi("Underlined", { fg = p.cyan, gui = "underline" }) -- Text that stands out, HTML links
+hi("Underlined", { fg = p.cyan, underline = true }) -- Text that stands out, HTML links
 -- Ignore         { }, -- Left blank, hidden |hl-Ignore| (NOTE: May be invisible here in template)
 hi("Error", { bg = p.light_red, fg = p.on_fg }) -- Any erroneous construct
 hi("Todo", { bg = p.yellow, fg = p.on_fg }) -- Anything that needs extra attention; mostly the keywords TODO FIXME and XXX
@@ -139,11 +139,11 @@ hi("LspReferenceText", { fg = p.fg }) -- Used for highlighting "text" references
 ----------------------
 -- Diagnostic
 ----------------------
-hi("DiagnosticError", { fg = p.light_red, gui = "bold" }) -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
-hi("DiagnosticWarn", { fg = p.yellow, gui = "bold" }) -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
-hi("DiagnosticInfo", { fg = p.light_cyan, gui = "bold" }) -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
-hi("DiagnosticHint", { fg = p.light_blue, gui = "bold" }) -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
-hi("DiagnosticOk", { fg = p.green, gui = "bold" }) -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
+hi("DiagnosticError", { fg = p.light_red, bold = true }) -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
+hi("DiagnosticWarn", { fg = p.yellow, bold = true }) -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
+hi("DiagnosticInfo", { fg = p.light_cyan, bold = true }) -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
+hi("DiagnosticHint", { fg = p.light_blue, bold = true }) -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
+hi("DiagnosticOk", { fg = p.green, bold = true }) -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
 -- DiagnosticVirtualTextError { } , -- Used for "Error" diagnostic virtual text.
 -- DiagnosticVirtualTextWarn  { } , -- Used for "Warn" diagnostic virtual text.
 -- DiagnosticVirtualTextInfo  { } , -- Used for "Info" diagnostic virtual text.
