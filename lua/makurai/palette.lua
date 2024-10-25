@@ -1,11 +1,11 @@
 return {
-  bg = "#1f2233",
+  bg = "#080707",
   bg_1 = "#1e2029",
   bg_2 = "#2c3042",
   fg = "#f8f8f0",
   on_fg = "#000000",
   comment = "#2D3640",
-  selection = "#3b3f4b",
+  selection = "#3d424d",
   border = "#a6accd",
   light_red = "#ff6e70",
   red = "#FF3333",
