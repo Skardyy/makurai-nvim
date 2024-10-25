@@ -240,13 +240,13 @@ hi("WhichKeySeparator", { fg = p.fg })
 -----------------------------
 --- ToggleTerm
 -----------------------------
-hi("ToggleTerm", { bg = p.bg })
+hi("ToggleTerm", { bg = p.bg_1 })
 hi("ToggleTermBorder", { fg = p.border })
 
 -----------------------------
 --- Lazy
 -----------------------------
-hi("LazyNormal", { fg = p.fg, bg = p.bg })
+hi("LazyNormal", { fg = p.fg, bg = p.bg_1 })
 hi("LazyButton", { fg = p.fg })
 hi("LazyButtonActive", { fg = p.fg, bg = p.selection, bold = true })
 hi("LazyH1", { fg = p.keyword, bold = true })
