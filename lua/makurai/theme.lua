@@ -167,6 +167,14 @@ hi("@lsp.type.namespace", { fg = p.fg }) -- Tag properties
 -- DiagnosticSignOk           { } , -- Used for "Ok" signs in sign column.
 
 -----------------------------------
+-- Markdown syntax groups.
+-----------------------------------
+hi("@markup.heading", { fg = p.orange })       -- heading
+hi("@markup.quote.markdown", { fg = p.green }) -- quote
+hi("@markup.raw", { fg = p.green })            -- strings
+hi("@markup.list", { fg = p.yellow })          -- list
+
+-----------------------------------
 -- Tree-Sitter syntax groups.
 -----------------------------------
 hi("@text.literal", { fg = p.comment }) -- Comment
