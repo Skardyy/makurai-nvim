@@ -169,10 +169,14 @@ hi("@lsp.type.namespace", { fg = p.fg }) -- Tag properties
 -----------------------------------
 -- Markdown syntax groups.
 -----------------------------------
-hi("@markup.heading", { fg = p.orange })       -- heading
-hi("@markup.quote.markdown", { fg = p.green }) -- quote
-hi("@markup.raw", { fg = p.green })            -- strings
-hi("@markup.special", { fg = p.yellow })       -- special
+hi("@markup.heading", { fg = p.orange })               -- heading
+hi("@markup.link", { fg = p.blue })                    -- brackets on a link
+hi("@markup.link.label", { fg = p.blue })              -- label on the link
+hi("@markup.link.url", { fg = p.cyan })                -- url on a link
+hi("@markup.quote.markdown", { fg = p.green })         -- quote
+hi("@markup.raw", { fg = p.green })                    -- strings
+hi("@punctuation.special.markdown", { fg = p.yellow }) -- >
+hi("@markup.list.markdown", { fg = p.yellow })         -- *
 
 -----------------------------------
 -- Tree-Sitter syntax groups.
