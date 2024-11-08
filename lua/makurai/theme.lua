@@ -172,7 +172,7 @@ hi("@lsp.type.namespace", { fg = p.fg }) -- Tag properties
 hi("@markup.heading", { fg = p.orange })       -- heading
 hi("@markup.quote.markdown", { fg = p.green }) -- quote
 hi("@markup.raw", { fg = p.green })            -- strings
-hi("@markup.list", { fg = p.yellow })          -- list
+hi("@markup.special", { fg = p.yellow })       -- special
 
 -----------------------------------
 -- Tree-Sitter syntax groups.
