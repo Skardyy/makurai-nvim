@@ -11,13 +11,14 @@
 
 ## Color Palette
 
-| Palette      | Hex       | RGB           | HSL             |                                                                                                |
-| ------------ | --------- | ------------- | --------------- | ---------------------------------------------------------------------------------------------- |
+| Palette      | Hex       | RGB           | HSL             |                                                                                                                     |
+| ------------ | --------- | ------------- | --------------- | ----------------------------------------------------------------------------------------------                      |
 | Orange       | `#FF7733` | `255 119 51`  | `20° 100% 60%`  | ![orange](https://raw.githubusercontent.com/Skardyy/makurai-theme/refs/heads/main/Dog/orange.png)                   |
 | Yellow       | `#FFEE99` | `255 238 153` | `50° 100% 80%`  | ![yellow](https://raw.githubusercontent.com/Skardyy/makurai-theme/refs/heads/main/Dog/yellow.png)                   |
 | Green        | `#95FB79` | `149 251 121` | `107° 94% 73%`  | ![green](https://raw.githubusercontent.com/Skardyy/makurai-theme/refs/heads/main/Dog/green.png)                     |
 | Purple       | `#D2A6FF` | `210 166 255` | `270° 100% 83%` | ![purple](https://raw.githubusercontent.com/Skardyy/makurai-theme/refs/heads/main/Dog/purple.png)                   |
 | Blue         | `#82aaff` | `130 170 255` | `221° 100% 75%` | ![blue](https://raw.githubusercontent.com/Skardyy/makurai-theme/refs/heads/main/Dog/blue.png)                       |
+| Accent       | `#ffdb29` | `255 219 41`  | `50°  100% 58%` | ![blue](https://raw.githubusercontent.com/Skardyy/makurai-theme/refs/heads/main/Dog/accent.png)                     |
 | Foreground   | `#f8f8f0` | `248 248 240` | `60° 36% 96%`   | ![Foreground](https://raw.githubusercontent.com/Skardyy/makurai-theme/refs/heads/main/Dog/Foreground.png)           |
 | Background   | `#15161b` | `21 22 27`    | `230° 13% 9%`   | ![Background](https://raw.githubusercontent.com/Skardyy/makurai-theme/refs/heads/main/Dog/Background.png)           |
 | Surface      | `#08090d` | `8 9 13`      | `228 24% 4%%`   | ![Surface](https://raw.githubusercontent.com/Skardyy/makurai-theme/refs/heads/main/Dog/Surface.png)                 |

@@ -16,14 +16,14 @@ hi("ColorColumn", { bg = "none", fg = "none" })   -- Columns set with 'colorcolu
 hi("Conceal", {})                                 -- Placeholder characters substituted for concealed text (see 'conceallevel')
 hi("CurSearch", { bg = p.yellow, fg = p.on_fg })  -- Highlighting a search pattern under the cursor (see 'hlsearch')
 hi("CursorColumn", {})                            -- Screen-column at the cursor, when 'cursorcolumn' is set.
-hi("CursorLine", { bg = p.bg_1 })                 -- Screen-line at the cursor, when 'cursorline' is set. Low-priority if foreground (ctermfg OR guifg) is not set.
+hi("CursorLine", { bg = p.surface2 })             -- Screen-line at the cursor, when 'cursorline' is set. Low-priority if foreground (ctermfg OR guifg) is not set.
 hi("Directory", { fg = p.cyan, bold = true })     -- Directory names (and other special names in listings)
 hi("DiffAdd", { fg = p.green })                   -- Diff mode: Added line |diff.txt|
 hi("DiffChange", { fg = p.fg })                   -- Diff mode: Changed line |diff.txt|
 hi("DiffDelete", { fg = p.light_red })            -- Diff mode: Deleted line |diff.txt|
 hi("DiffText", { fg = p.fg })                     -- Diff mode: Changed text within a changed line |diff.txt|
-hi("EndOfBuffer", { fg = p.comment })             -- Filler lines (~) after the end of the buffer. By default, this is highlighted like |hl-NonText|.
-hi("TermCursor", { fg = p.on_fg, bg = p.yellow }) -- Cursor in a focused terminal
+hi("EndOfBuffer", { fg = p.line })                -- Filler lines (~) after the end of the buffer. By default, this is highlighted like |hl-NonText|.
+hi("TermCursor", { fg = p.on_fg, bg = p.accent }) -- Cursor in a focused terminal
 hi("TermCursorNC", { fg = p.on_fg, bg = p.fg })   -- Cursor in an unfocused terminal
 hi("ErrorMsg", { fg = p.red })                    -- Error messages on the command line
 hi("VertSplit", { fg = p.border, bg = p.border }) -- Column separating vertically split windows
@@ -32,16 +32,16 @@ hi("FoldColumn", {})                              -- 'foldcolumn'
 hi("SignColumn", {})                              -- Column where |signs| are displayed
 hi("IncSearch", { fg = p.on_fg, bg = p.yellow })  -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
 hi("Substitute", { fg = p.on_fg, bg = p.yellow }) -- |:substitute| replacement text highlighting
-hi("LineNr", { fg = p.comment })                  -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-hi("LineNrAbove", { fg = p.comment })             -- Line number for when the 'relativenumber' option is set, above the cursor line
-hi("LineNrBelow", { fg = p.comment })             -- Line number for when the 'relativenumber' option is set, below the cursor line
-hi("CursorLineNr", { fg = p.orange })             -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+hi("LineNr", { fg = p.line })                     -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+hi("LineNrAbove", { fg = p.line })                -- Line number for when the 'relativenumber' option is set, above the cursor line
+hi("LineNrBelow", { fg = p.line })                -- Line number for when the 'relativenumber' option is set, below the cursor line
+hi("CursorLineNr", { fg = p.accent })             -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
 -- CursorLineFold { }, -- Like FoldColumn when 'cursorline' is set for the cursor line
 -- CursorLineSign { }, -- Like SignColumn when 'cursorline' is set for the cursor line
-hi("MatchParen", { fg = p.on_fg, bg = p.light_orange }) -- Character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
-hi("ModeMsg", { fg = p.green })                         -- 'showmode' message (e.g., "-- INSERT -- ")
-hi("MsgArea", { fg = p.yellow })                        -- Area for messages and cmdline
-hi("MsgSeparator", { fg = p.border, bg = p.border })    -- Separator for scrolled messages, `msgsep` flag of 'display'
+hi("MatchParen", { fg = p.on_fg, bg = p.accent })    -- Character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
+hi("ModeMsg", { fg = p.green })                      -- 'showmode' message (e.g., "-- INSERT -- ")
+hi("MsgArea", { fg = p.yellow })                     -- Area for messages and cmdline
+hi("MsgSeparator", { fg = p.border, bg = p.border }) -- Separator for scrolled messages, `msgsep` flag of 'display'
 -- MoreMsg        {}, -- |more-prompt|
 -- NonText        { }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
 hi("Normal", { bg = "none" })                     -- Normal text
@@ -65,17 +65,17 @@ hi("Search", { fg = p.on_fg, bg = p.border }) -- Last search pattern highlightin
 -- SpellCap       { }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
 -- SpellLocal     { }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
 -- SpellRare      { }, -- Word that is recognized by the spellchecker as one that is hardly ever used. |spell| Combined with the highlighting used otherwise.
-hi("StatusLine", { bg = p.bg, fg = p.border })   -- Status line of current window
-hi("StatusLineNC", { bg = p.bg, fg = p.border }) -- Status lines of not-current windows. Note: If this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
-hi("TabLine", { bg = p.bg, fg = p.border })      -- Tab pages line, not active tab page label
-hi("TabLineFill", {})                            -- Tab pages line, where there are no labels
-hi("TabLineSel", { bg = p.comment, fg = p.fg })  -- Tab pages line, active tab page label
+hi("StatusLine", { bg = p.surface, fg = p.border })   -- Status line of current window
+hi("StatusLineNC", { bg = p.surface, fg = p.border }) -- Status lines of not-current windows. Note: If this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
+hi("TabLine", { bg = p.surface, fg = p.border })      -- Tab pages line, not active tab page label
+hi("TabLineFill", {})                                 -- Tab pages line, where there are no labels
+hi("TabLineSel", { bg = p.guide, fg = p.fg })         -- Tab pages line, active tab page label
 -- Title          { }, -- Titles for output from ":set all", ":autocmd" etc.
-hi("Visual", { bg = p.selection })               -- Visual mode selection
+hi("Visual", { bg = p.selection })                    -- Visual mode selection
 -- VisualNOS      { }, -- Visual mode selection when vim is "Not Owning the Selection".
-hi("WarningMsg", { fg = p.yellow })              -- Warning messages
-hi("Whitespace", { fg = p.comment })             -- "nbsp", "space", "tab" and "trail" in 'listchars'
-hi("Winseparator", { fg = p.border })            -- Separator between window splits. Inherts from |hl-VertSplit| by default, which it will replace eventually.
+hi("WarningMsg", { fg = p.yellow })                   -- Warning messages
+hi("Whitespace", { fg = p.guide })                    -- "nbsp", "space", "tab" and "trail" in 'listchars'
+hi("Winseparator", { fg = p.border })                 -- Separator between window splits. Inherts from |hl-VertSplit| by default, which it will replace eventually.
 -- WildMenu       { }, -- Current match in 'wildmenu' completion
 -- WinBar         { }, -- Window bar of current window
 -- WinBarNC       { }, -- Window bar of not-current windows
@@ -245,20 +245,20 @@ hi("TelescopeBorder", { fg = p.border })
 -----------------------------
 --- WhichKey
 -----------------------------
-hi("WhichKeyNormal", { bg = p.bg_1 })
+hi("WhichKeyNormal", { bg = p.surface2 })
 hi("WhichKeyValue", { fg = p.fg })
 hi("WhichKeySeparator", { fg = p.fg })
 
 -----------------------------
 --- ToggleTerm
 -----------------------------
-hi("ToggleTerm", { bg = p.bg_1 })
+hi("ToggleTerm", { bg = p.surface2 })
 hi("ToggleTermBorder", { fg = p.border })
 
 -----------------------------
 --- Lazy
 -----------------------------
-hi("LazyNormal", { fg = p.fg, bg = p.bg_1 })
+hi("LazyNormal", { fg = p.fg, bg = p.surface2 })
 hi("LazyButton", { fg = p.fg })
 hi("LazyButtonActive", { fg = p.fg, bg = p.selection, bold = true })
 hi("LazyH1", { fg = p.keyword, bold = true })

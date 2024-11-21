@@ -1,12 +1,13 @@
 return {
-  bg = "#08090d",
-  bg_1 = "#1e2029",
-  bg_2 = "#08090d",
-  fg = "#f8f8f0",
+  bg = "#15161b",
+  surface = "#08090d",
+  surface2 = "#1e2029",
   on_fg = "#000000",
-  comment = "#2D3640",
+  comment = "#5C6773",
   selection = "#3d424d",
   border = "#a6accd",
+  line = "#25282e",
+  guide = "#2D3640",
   light_red = "#ff6e70",
   red = "#FF3333",
   purple = "#D2A6FF",
@@ -17,4 +18,5 @@ return {
   orange = "#FF7733",
   light_orange = "#ff9e64",
   cyan = "#7dcfff",
+  accent = "#ffdb29"
 }
