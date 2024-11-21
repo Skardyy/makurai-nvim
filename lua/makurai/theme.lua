@@ -57,9 +57,9 @@ hi("PmenuExtra", {})                              -- Popup menu: Normal item "ex
 hi("PmenuExtraSel", {})                           -- Popup menu: Selected item "extra text"
 -- PmenuSbar      { }, -- Popup menu: Scrollbar.
 -- PmenuThumb     { }, -- Popup menu: Thumb of the scrollbar.
-hi("Question", { fg = p.yellow })             -- |hit-enter| prompt and yes/no questions
-hi("QuickFixLine", { fg = p.yellow })         -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
-hi("Search", { fg = p.on_fg, bg = p.border }) -- Last search pattern highlighting (see 'hlsearch'). Also used for similar items that need to stand out.
+hi("Question", { fg = p.yellow })                -- |hit-enter| prompt and yes/no questions
+hi("QuickFixLine", { fg = p.yellow })            -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
+hi("Search", { fg = p.on_fg, bg = p.selection }) -- Last search pattern highlighting (see 'hlsearch'). Also used for similar items that need to stand out.
 -- SpecialKey     { }, -- Unprintable characters: text displayed differently from what it really is. But not 'listchars' whitespace. |hl-Whitespace|
 -- SpellBad       { }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
 -- SpellCap       { }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
