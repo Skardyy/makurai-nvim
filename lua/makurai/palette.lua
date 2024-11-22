@@ -18,6 +18,5 @@ return {
   orange = "#FF7733",
   light_orange = "#ff9e64",
   cyan = "#7dcfff",
-  active_line = "#505257",
   accent = "#ffdb29"
 }
