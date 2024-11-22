@@ -35,10 +35,10 @@ hi("Substitute", { fg = p.on_fg, bg = p.yellow }) -- |:substitute| replacement t
 hi("LineNr", { fg = p.line })                     -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 hi("LineNrAbove", { fg = p.line })                -- Line number for when the 'relativenumber' option is set, above the cursor line
 hi("LineNrBelow", { fg = p.line })                -- Line number for when the 'relativenumber' option is set, below the cursor line
-hi("CursorLineNr", { fg = p.accent })             -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+hi("CursorLineNr", { fg = p.active_line })        -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
 -- CursorLineFold { }, -- Like FoldColumn when 'cursorline' is set for the cursor line
 -- CursorLineSign { }, -- Like SignColumn when 'cursorline' is set for the cursor line
-hi("MatchParen", { fg = p.on_fg, bg = p.accent })    -- Character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
+hi("MatchParen", { bg = p.selection })               -- Character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
 hi("ModeMsg", { fg = p.green })                      -- 'showmode' message (e.g., "-- INSERT -- ")
 hi("MsgArea", { fg = p.yellow })                     -- Area for messages and cmdline
 hi("MsgSeparator", { fg = p.border, bg = p.border }) -- Separator for scrolled messages, `msgsep` flag of 'display'
