@@ -1,6 +1,6 @@
 # Makurai Theme
 A dark theme for neovim  
-![link for more ports of the theme](https://github.com/Skardyy/makurai-theme)
+[link for more ports of the theme](https://github.com/Skardyy/makurai-theme)
 
 
 ### Screenshots  
