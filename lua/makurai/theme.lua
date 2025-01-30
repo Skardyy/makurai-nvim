@@ -174,7 +174,7 @@ hi("@markup.heading", { fg = p.orange })               -- heading
 hi("@markup.link", { fg = p.blue })                    -- brackets on a link
 hi("@markup.link.label", { fg = p.blue })              -- label on the link
 hi("@markup.link.url", { fg = p.cyan })                -- url on a link
-hi("@markup.quote.markdown", { fg = p.green })         -- quote
+hi("@markup.quote.markdown", { fg = p.yellow })        -- quote
 hi("@markup.raw", { fg = p.green })                    -- strings
 hi("@punctuation.special.markdown", { fg = p.yellow }) -- >
 hi("@markup.list.markdown", { fg = p.yellow })         -- *
@@ -284,7 +284,9 @@ hi("RenderMarkdownH3Bg", { bg = p.light_orange })
 hi("RenderMarkdownH4Bg", { bg = p.light_orange })
 hi("RenderMarkdownH5Bg", { bg = p.light_orange })
 hi("RenderMarkdownH6Bg", { bg = p.light_orange })
-
 hi("RenderMarkdownCode", { bg = p.surface2 })
+hi("RenderMarkdownBullet", { fg = p.yellow })
+hi("RenderMarkdownQuote", { fg = p.yellow })
+hi("RenderMarkdownTableRow", { fg = p.yellow })
 
 return {}
