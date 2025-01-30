@@ -14,7 +14,7 @@ end
 --- Normal Highlights
 ------------------------------
 hi("ColorColumn", { bg = "none", fg = "none" })   -- Columns set with 'colorcolumn'
-hi("Conceal", { fg = p.yellow })                  -- Placeholder characters substituted for concealed text (see 'conceallevel')
+hi("Conceal", {})                                 -- Placeholder characters substituted for concealed text (see 'conceallevel')
 hi("CurSearch", { bg = p.yellow, fg = p.on_fg })  -- Highlighting a search pattern under the cursor (see 'hlsearch')
 hi("CursorColumn", {})                            -- Screen-column at the cursor, when 'cursorcolumn' is set.
 hi("CursorLine", { bg = p.surface2 })             -- Screen-line at the cursor, when 'cursorline' is set. Low-priority if foreground (ctermfg OR guifg) is not set.
