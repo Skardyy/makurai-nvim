@@ -16,7 +16,7 @@ return {
   blue = "#82aaff",
   light_blue = "#a6dbff",
   orange = "#FF7733",
-  light_orange = "#ff9e64",
+  light_orange = "#211817",
   cyan = "#7dcfff",
   accent = "#ffdb29"
 }
