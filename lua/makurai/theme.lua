@@ -289,4 +289,10 @@ hi("RenderMarkdownBullet", { fg = p.yellow })
 hi("RenderMarkdownQuote", { fg = p.yellow })
 hi("RenderMarkdownTableRow", { fg = p.yellow })
 
+
+-----------------------------
+--- render-markdown.nvim
+-----------------------------
+hi("@property.yaml", { fg = p.orange })
+
 return {}
