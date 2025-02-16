@@ -1,8 +1,10 @@
 local p = require("makurai.palette")
 
-vim.g.colors_name = "makurai"
-vim.opt.background = "dark"
 vim.cmd("hi clear")
+
+vim.opt.background = "dark"
+vim.g.colors_name = "makurai"
+
 local is_gui_mode = vim.fn.has("gui_running") == 1
 
 -- Define highlight groups
