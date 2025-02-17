@@ -1,5 +1,6 @@
 return {
   bg = "#15161b",
+  fg = "#f8f8f0",
   surface = "#08090d",
   surface2 = "#1e2029",
   on_fg = "#000000",

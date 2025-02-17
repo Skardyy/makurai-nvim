@@ -296,7 +296,7 @@ function M.load()
 
 
   -----------------------------
-  --- render-markdown.nvim
+  --- yaml
   -----------------------------
   hi("@property.yaml", { fg = p.orange })
 end
