@@ -50,17 +50,17 @@ function M.load()
   hi("MsgSeparator", { fg = p.border, bg = p.border }) -- Separator for scrolled messages, `msgsep` flag of 'display'
   -- MoreMsg        {}, -- |more-prompt|
   -- NonText        { }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
-  hi("Normal", { bg = is_gui_mode and "#15161b" or 'none' }) -- Normal text
-  hi("NormalFloat", { bg = "none", fg = p.border })          -- Normal text in floating windows.
-  hi("FloatBorder", { fg = p.border })                       -- Border of floating windows.
+  hi("Normal", { bg = is_gui_mode and "#15161b" or 'none', fg = p.fg }) -- Normal text
+  hi("NormalFloat", { bg = "none", fg = p.border, fg = p.fg })          -- Normal text in floating windows.
+  hi("FloatBorder", { fg = p.border })                                  -- Border of floating windows.
   -- FloatTitle     { }, -- Title of floating windows.
-  hi("NormalNC", {})                                         -- normal text in non-current windows
-  hi("Pmenu", { fg = p.fg })                                 -- Popup menu: Normal item.
-  hi("PmenuSel", {})                                         -- Popup menu: Selected item.
-  hi("PmenuKind", {})                                        -- Popup menu: Normal item "kind"
-  hi("PmenuKindSel", {})                                     -- Popup menu: Selected item "kind"
-  hi("PmenuExtra", {})                                       -- Popup menu: Normal item "extra text"
-  hi("PmenuExtraSel", {})                                    -- Popup menu: Selected item "extra text"
+  hi("NormalNC", {})                                                    -- normal text in non-current windows
+  hi("Pmenu", { fg = p.fg })                                            -- Popup menu: Normal item.
+  hi("PmenuSel", {})                                                    -- Popup menu: Selected item.
+  hi("PmenuKind", {})                                                   -- Popup menu: Normal item "kind"
+  hi("PmenuKindSel", {})                                                -- Popup menu: Selected item "kind"
+  hi("PmenuExtra", {})                                                  -- Popup menu: Normal item "extra text"
+  hi("PmenuExtraSel", {})                                               -- Popup menu: Selected item "extra text"
   -- PmenuSbar      { }, -- Popup menu: Scrollbar.
   -- PmenuThumb     { }, -- Popup menu: Thumb of the scrollbar.
   hi("Question", { fg = p.yellow })     -- |hit-enter| prompt and yes/no questions
