@@ -23,8 +23,8 @@ function M.load(p)
   hi("CursorColumn", {})                            -- Screen-column at the cursor, when 'cursorcolumn' is set.
   hi("CursorLine", { bg = p.surface2 })             -- Screen-line at the cursor, when 'cursorline' is set. Low-priority if foreground (ctermfg OR guifg) is not set.
   hi("Directory", { fg = p.cyan, bold = true })     -- Directory names (and other special names in listings)
-  hi("DiffAdd", { fg = p.green })                   -- Diff mode: Added line |diff.txt|
-  hi("DiffChange", { fg = p.fg })                   -- Diff mode: Changed line |diff.txt|
+  hi("DiffAdd", { fg = p.insert })                  -- Diff mode: Added line |diff.txt|
+  hi("DiffChange", { fg = p.visual })               -- Diff mode: Changed line |diff.txt|
   hi("DiffDelete", { fg = p.light_red })            -- Diff mode: Deleted line |diff.txt|
   hi("DiffText", { fg = p.fg })                     -- Diff mode: Changed text within a changed line |diff.txt|
   hi("EndOfBuffer", { fg = p.line })                -- Filler lines (~) after the end of the buffer. By default, this is highlighted like |hl-NonText|.
@@ -44,7 +44,7 @@ function M.load(p)
   -- CursorLineFold { }, -- Like FoldColumn when 'cursorline' is set for the cursor line
   -- CursorLineSign { }, -- Like SignColumn when 'cursorline' is set for the cursor line
   hi("MatchParen", { bg = p.selection })               -- Character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
-  hi("ModeMsg", { fg = p.green })                      -- 'showmode' message (e.g., "-- INSERT -- ")
+  hi("ModeMsg", { fg = p.insert })                     -- 'showmode' message (e.g., "-- INSERT -- ")
   hi("MsgArea", { fg = p.yellow })                     -- Area for messages and cmdline
   hi("MsgSeparator", { fg = p.border, bg = p.border }) -- Separator for scrolled messages, `msgsep` flag of 'display'
   -- MoreMsg        {}, -- |more-prompt|
@@ -238,8 +238,8 @@ function M.load(p)
   -----------------------------
   --- Git Signs
   -----------------------------
-  hi("GitSignsAdd", { fg = p.green })
-  hi("GitSignsChange", { fg = p.yellow })
+  hi("GitSignsAdd", { fg = p.insert })
+  hi("GitSignsChange", { fg = p.visual })
   hi("GitSignsDelete", { fg = p.light_red })
 
   -----------------------------
