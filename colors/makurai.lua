@@ -1,1 +1,1 @@
-require("makurai").load()
+require("makurai").load("normal")

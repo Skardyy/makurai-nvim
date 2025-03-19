@@ -1,6 +1,7 @@
+---@type Makurai.Palette
 return {
   bg = "#15161b",
-  fg = "#ffffff",
+  fg = "#e8e8ea",
   surface = "#08090d",
   surface2 = "#1e2029",
   on_fg = "#000000",
@@ -11,13 +12,15 @@ return {
   guide = "#2D3640",
   light_red = "#ff6e70",
   red = "#FF3333",
-  purple = "#D2A6FF",
-  green = "#95FB79",
-  yellow = "#FFEE99",
-  blue = "#82aaff",
-  light_blue = "#a6dbff",
-  orange = "#FF7733",
+  purple = "#FF7733",
+  green = "#92c468",
+  yellow = "#9d9eb0",
+  blue = "#9da4a2",
+  orange = "#f7e254",
   light_orange = "#211817",
   cyan = "#7dcfff",
-  accent = "#ffdb29"
+
+  normal = "#82aaff",
+  insert = "#95FB79",
+  visual = "#FFEE99"
 }

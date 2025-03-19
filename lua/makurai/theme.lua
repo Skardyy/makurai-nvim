@@ -1,8 +1,7 @@
 local M = {}
 
-function M.load()
-  local p = require("makurai.palette")
-
+---@param p Makurai.Palette
+function M.load(p)
   vim.cmd("hi clear")
 
   vim.opt.background = "dark"
@@ -29,7 +28,7 @@ function M.load()
   hi("DiffDelete", { fg = p.light_red })            -- Diff mode: Deleted line |diff.txt|
   hi("DiffText", { fg = p.fg })                     -- Diff mode: Changed text within a changed line |diff.txt|
   hi("EndOfBuffer", { fg = p.line })                -- Filler lines (~) after the end of the buffer. By default, this is highlighted like |hl-NonText|.
-  hi("TermCursor", { fg = p.on_fg, bg = p.accent }) -- Cursor in a focused terminal
+  hi("TermCursor", { fg = p.on_fg, bg = p.fg })     -- Cursor in a focused terminal
   hi("TermCursorNC", { fg = p.on_fg, bg = p.fg })   -- Cursor in an unfocused terminal
   hi("ErrorMsg", { fg = p.red })                    -- Error messages on the command line
   hi("VertSplit", { fg = p.border, bg = p.border }) -- Column separating vertically split windows
