@@ -6,8 +6,15 @@
 </div>
 
 ---
+```lua
+vim.cmd.colorscheme("makurai")
+```
 ![image](https://github.com/user-attachments/assets/2024cb16-1e36-493a-90bd-7d07cbdf051e)  
-![image](https://github.com/user-attachments/assets/326848b5-07c3-4aea-a82a-639d78555e21)  
+
+```lua
+vim.cmd.colorscheme("makurai_less")
+```
+![image](https://github.com/user-attachments/assets/7ea63daf-65ac-4341-b503-c6f150ada412)
 
 ## Installation 🚀  
 lazy:  
