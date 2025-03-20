@@ -11,7 +11,6 @@ return {
   line = "#25282e",
   guide = "#2D3640",
   light_red = "#ff6e70",
-  red = "#FF3333",
   purple = "#FF7733",
   green = "#92c468",
   yellow = "#9d9eb0",

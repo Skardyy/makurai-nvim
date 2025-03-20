@@ -10,7 +10,6 @@
 ---@field line string
 ---@field guide string
 ---@field light_red string
----@field red string
 ---@field purple string
 ---@field green string
 ---@field yellow string
@@ -35,7 +34,6 @@ return {
   line = "#25282e",
   guide = "#2D3640",
   light_red = "#ff6e70",
-  red = "#FF3333",
   purple = "#D2A6FF",
   green = "#95FB79",
   yellow = "#FFEE99",

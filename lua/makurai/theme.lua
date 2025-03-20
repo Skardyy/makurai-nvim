@@ -30,7 +30,7 @@ function M.load(p)
   hi("EndOfBuffer", { fg = p.line })                -- Filler lines (~) after the end of the buffer. By default, this is highlighted like |hl-NonText|.
   hi("TermCursor", { fg = p.on_fg, bg = p.fg })     -- Cursor in a focused terminal
   hi("TermCursorNC", { fg = p.on_fg, bg = p.fg })   -- Cursor in an unfocused terminal
-  hi("ErrorMsg", { fg = p.red })                    -- Error messages on the command line
+  hi("ErrorMsg", { fg = p.light_red })              -- Error messages on the command line
   hi("VertSplit", { fg = p.border, bg = p.border }) -- Column separating vertically split windows
   hi("Folded", {})                                  -- Line used for closed folds
   hi("FoldColumn", {})                              -- 'foldcolumn'
@@ -145,11 +145,11 @@ function M.load(p)
   ----------------------
   -- Diagnostic
   ----------------------
-  -- hi("DiagnosticError", { fg = p.light_red, bold = true }) -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
-  -- hi("DiagnosticWarn", { fg = p.yellow, bold = true }) -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
-  -- hi("DiagnosticInfo", { fg = p.light_cyan, bold = true }) -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
-  -- hi("DiagnosticHint", { fg = p.light_blue, bold = true }) -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
-  -- hi("DiagnosticOk", { fg = p.green, bold = true }) -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
+  hi("DiagnosticError", { fg = p.light_red }) -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
+  hi("DiagnosticWarn", { fg = p.visual })     -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
+  hi("DiagnosticInfo", { fg = p.normal })     -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
+  hi("DiagnosticHint", { fg = p.cyan })       -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
+  hi("DiagnosticOk", { fg = p.insert })       -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
   -- DiagnosticVirtualTextError { } , -- Used for "Error" diagnostic virtual text.
   -- DiagnosticVirtualTextWarn  { } , -- Used for "Warn" diagnostic virtual text.
   -- DiagnosticVirtualTextInfo  { } , -- Used for "Info" diagnostic virtual text.
