@@ -14,7 +14,7 @@ vim.cmd.colorscheme("makurai")
 ```lua
 vim.cmd.colorscheme("makurai_less")
 ```
-![image](https://github.com/user-attachments/assets/7ea63daf-65ac-4341-b503-c6f150ada412)
+![image](https://github.com/user-attachments/assets/08c7c6da-2c70-4a0b-a299-1f1f760416ec)
 
 ## Installation 🚀  
 lazy:  
@@ -31,3 +31,11 @@ return {
 ```
 
 check the main repo [here](https://github.com/Skardyy/makurai-theme)
+
+
+
+
+
+
+
+<p align="center">no usuage is not a real word..</p>
