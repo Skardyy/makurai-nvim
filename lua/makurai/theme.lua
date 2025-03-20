@@ -50,7 +50,7 @@ function M.load(p)
   -- MoreMsg        {}, -- |more-prompt|
   -- NonText        { }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
   hi("Normal", { bg = is_gui_mode and "#15161b" or 'none', fg = p.fg }) -- Normal text
-  hi("NormalFloat", { bg = "none", fg = p.border, fg = p.fg })          -- Normal text in floating windows.
+  hi("NormalFloat", { bg = "none", fg = p.border })                     -- Normal text in floating windows.
   hi("FloatBorder", { fg = p.border })                                  -- Border of floating windows.
   -- FloatTitle     { }, -- Title of floating windows.
   hi("NormalNC", {})                                                    -- normal text in non-current windows
@@ -147,7 +147,7 @@ function M.load(p)
   ----------------------
   hi("DiagnosticError", { fg = p.light_red }) -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
   hi("DiagnosticWarn", { fg = p.visual })     -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
-  hi("DiagnosticInfo", { fg = p.normal })     -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
+  hi("DiagnosticInfo", { fg = p.cyan })       -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
   hi("DiagnosticHint", { fg = p.cyan })       -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
   hi("DiagnosticOk", { fg = p.insert })       -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
   -- DiagnosticVirtualTextError { } , -- Used for "Error" diagnostic virtual text.
@@ -266,17 +266,17 @@ function M.load(p)
   hi("LazyNormal", { fg = p.fg, bg = p.surface2 })
   hi("LazyButton", { fg = p.fg })
   hi("LazyButtonActive", { fg = p.fg, bg = p.selection, bold = true })
-  hi("LazyH1", { fg = p.keyword, bold = true })
+  hi("LazyH1", { fg = p.orange, bold = true })
   hi("LazyH2", { fg = p.yellow, bold = true })
-  hi("LazySpecial", { fg = p.special })
+  hi("LazySpecial", { fg = p.blue })
   hi("LazyProgressTodo", { fg = p.border })
-  hi("LazyProgressDone", { fg = p.string })
-  hi("LazyProp", { fg = p.constant })
-  hi("LazyValue", { fg = p.string })
+  hi("LazyProgressDone", { fg = p.green })
+  hi("LazyProp", { fg = p.purple })
+  hi("LazyValue", { fg = p.green })
   hi("LazyReasonPlugin", { fg = p.yellow })
-  hi("LazyReasonRuntime", { fg = p.keyword })
-  hi("LazyReasonEvent", { fg = p.regexp })
-  hi("LazyCommit", { fg = p.constant })
+  hi("LazyReasonRuntime", { fg = p.orange })
+  hi("LazyReasonEvent", { fg = p.cyan })
+  hi("LazyCommit", { fg = p.purple })
   hi("LazyComment", { fg = p.border })
 
   -----------------------------

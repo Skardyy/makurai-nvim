@@ -19,6 +19,7 @@ return {
   light_orange = "#24221a",
   cyan = "#7dcfff",
 
+  command = "#D2A6FF",
   normal = "#82aaff",
   insert = "#95FB79",
   visual = "#FFEE99"

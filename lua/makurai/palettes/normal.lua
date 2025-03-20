@@ -17,6 +17,7 @@
 ---@field orange string
 ---@field light_orange string
 ---@field cyan string
+---@field command string
 ---@field normal string
 ---@field insert string
 ---@field visual string
@@ -42,6 +43,7 @@ return {
   light_orange = "#211817",
   cyan = "#7dcfff",
 
+  command = "#D2A6FF",
   normal = "#82aaff",
   insert = "#95FB79",
   visual = "#FFEE99"
