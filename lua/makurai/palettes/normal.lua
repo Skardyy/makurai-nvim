@@ -1,4 +1,5 @@
 ---@class Makurai.Palette
+---@field name string
 ---@field bg string
 ---@field fg string
 ---@field surface string
@@ -24,6 +25,7 @@
 
 ---@type Makurai.Palette
 return {
+  name = "makurai",
   bg = "#15161b",
   fg = "#ffffff",
   surface = "#08090d",

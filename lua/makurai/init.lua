@@ -7,4 +7,9 @@ function M.load(variant)
   require("makurai.theme").load(p)
 end
 
+---@param user_opts Makurai.config
+function M.setup(user_opts)
+  require "makurai.config".extend(user_opts)
+end
+
 return M

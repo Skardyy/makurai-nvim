@@ -1,5 +1,6 @@
 ---@type Makurai.Palette
 return {
+  name = "makurai_less",
   bg = "#15161b",
   fg = "#e8e8ea",
   surface = "#08090d",

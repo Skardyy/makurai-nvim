@@ -2,17 +2,20 @@ local M = {}
 
 ---@param p Makurai.Palette
 function M.load(p)
-  vim.cmd("hi clear")
+  if vim.g.colors_name then
+    vim.cmd("hi clear")
+  end
 
   vim.opt.background = "dark"
-  vim.g.colors_name = "makurai"
-
-  local is_gui_mode = vim.fn.has("gui_running") == 1
+  vim.g.colors_name = p.name
+  vim.o.termguicolors = true
 
   -- Define highlight groups
   local hi = function(group, opts)
     vim.api.nvim_set_hl(0, group, opts)
   end
+
+  local opts = require "makurai.config".get()
 
   ------------------------------
   --- Normal Highlights
@@ -49,12 +52,12 @@ function M.load(p)
   hi("MsgSeparator", { fg = p.border, bg = p.border }) -- Separator for scrolled messages, `msgsep` flag of 'display'
   -- MoreMsg        {}, -- |more-prompt|
   -- NonText        { }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
-  hi("Normal", { bg = is_gui_mode and "#15161b" or 'none', fg = p.fg }) -- Normal text
-  hi("NormalFloat", { bg = "none", fg = p.border })                     -- Normal text in floating windows.
-  hi("FloatBorder", { fg = p.border })                                  -- Border of floating windows.
+  hi("Normal", { bg = opts.transparent and "none" or p.bg, fg = p.fg }) -- Normal text
+  hi("NormalFloat", { bg = p.surface2 })                                -- Normal text in floating windows.
+  hi("FloatBorder", { fg = p.border, bg = p.bg })                       -- Border of floating windows.
   -- FloatTitle     { }, -- Title of floating windows.
   hi("NormalNC", {})                                                    -- normal text in non-current windows
-  hi("Pmenu", { fg = p.fg })                                            -- Popup menu: Normal item.
+  hi("Pmenu", { fg = p.fg, bg = p.surface2 })                           -- Popup menu: Normal item.
   hi("PmenuSel", {})                                                    -- Popup menu: Selected item.
   hi("PmenuKind", {})                                                   -- Popup menu: Normal item "kind"
   hi("PmenuKindSel", {})                                                -- Popup menu: Selected item "kind"
