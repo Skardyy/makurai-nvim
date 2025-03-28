@@ -24,8 +24,14 @@
 ---@field insert string
 ---@field visual string
 
+---@class Makurai.theme
+---@field get fun(): Makurai.Palette
+---@field extend fun(o: Makurai.Palette)
+
+local M = {}
+
 ---@type Makurai.Palette
-return {
+M.p = {
   name = "makurai",
   bg = "#15161b",
   fg = "#ffffff",
@@ -52,3 +58,17 @@ return {
   insert = "#95FB79",
   visual = "#FFEE99"
 }
+
+M.copy = vim.deepcopy(M.p)
+
+---@return Makurai.Palette
+function M.get()
+  return M.p
+end
+
+---@param o Makurai.Palette
+function M.extend(o)
+  M.p = vim.tbl_deep_extend("force", M.p, o)
+end
+
+return M

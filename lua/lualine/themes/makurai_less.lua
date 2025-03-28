@@ -1,4 +1,4 @@
-local p = require "makurai.palettes.silent"
+local p = require "makurai.palettes.silent".get()
 
 return {
   normal = {
