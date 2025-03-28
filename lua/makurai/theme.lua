@@ -24,7 +24,7 @@ function M.load(p)
   hi("Conceal", {})                                 -- Placeholder characters substituted for concealed text (see 'conceallevel')
   hi("CurSearch", { bg = p.yellow, fg = p.on_fg })  -- Highlighting a search pattern under the cursor (see 'hlsearch')
   hi("CursorColumn", {})                            -- Screen-column at the cursor, when 'cursorcolumn' is set.
-  hi("CursorLine", { bg = p.surface2 })             -- Screen-line at the cursor, when 'cursorline' is set. Low-priority if foreground (ctermfg OR guifg) is not set.
+  hi("CursorLine", { bg = p.cursor })               -- Screen-line at the cursor, when 'cursorline' is set. Low-priority if foreground (ctermfg OR guifg) is not set.
   hi("Directory", { fg = p.cyan, bold = true })     -- Directory names (and other special names in listings)
   hi("DiffAdd", { fg = p.insert })                  -- Diff mode: Added line |diff.txt|
   hi("DiffChange", { fg = p.visual })               -- Diff mode: Changed line |diff.txt|
@@ -53,16 +53,16 @@ function M.load(p)
   -- MoreMsg        {}, -- |more-prompt|
   -- NonText        { }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
   hi("Normal", { bg = opts.transparent and "none" or p.bg, fg = p.fg }) -- Normal text
-  hi("NormalFloat", { bg = p.surface2 })                                -- Normal text in floating windows.
-  hi("FloatBorder", { fg = p.border, bg = p.bg })                       -- Border of floating windows.
+  hi("NormalFloat", { bg = p.surface })                                 -- Normal text in floating windows.
+  hi("FloatBorder", { fg = p.border })                                  -- Border of floating windows.
   -- FloatTitle     { }, -- Title of floating windows.
   hi("NormalNC", {})                                                    -- normal text in non-current windows
   hi("Pmenu", { fg = p.fg, bg = p.surface2 })                           -- Popup menu: Normal item.
-  hi("PmenuSel", {})                                                    -- Popup menu: Selected item.
+  hi("PmenuSel", { bg = p.selection })                                  -- Popup menu: Selected item.
   hi("PmenuKind", {})                                                   -- Popup menu: Normal item "kind"
-  hi("PmenuKindSel", {})                                                -- Popup menu: Selected item "kind"
+  hi("PmenuKindSel", { bg = p.selection })                              -- Popup menu: Selected item "kind"
   hi("PmenuExtra", {})                                                  -- Popup menu: Normal item "extra text"
-  hi("PmenuExtraSel", {})                                               -- Popup menu: Selected item "extra text"
+  hi("PmenuExtraSel", { bg = p.selection })                             -- Popup menu: Selected item "extra text"
   -- PmenuSbar      { }, -- Popup menu: Scrollbar.
   -- PmenuThumb     { }, -- Popup menu: Thumb of the scrollbar.
   hi("Question", { fg = p.yellow })     -- |hit-enter| prompt and yes/no questions
@@ -77,7 +77,7 @@ function M.load(p)
   hi("StatusLineNC", { bg = p.surface, fg = p.border }) -- Status lines of not-current windows. Note: If this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
   hi("TabLine", { bg = p.surface, fg = p.border })      -- Tab pages line, not active tab page label
   hi("TabLineFill", {})                                 -- Tab pages line, where there are no labels
-  hi("TabLineSel", { bg = p.guide, fg = p.fg })         -- Tab pages line, active tab page label
+  hi("TabLineSel", { bg = p.selection, fg = p.fg })     -- Tab pages line, active tab page label
   -- Title          { }, -- Titles for output from ":set all", ":autocmd" etc.
   hi("Visual", { bg = p.selection })                    -- Visual mode selection
   -- VisualNOS      { }, -- Visual mode selection when vim is "Not Owning the Selection".
@@ -301,6 +301,37 @@ function M.load(p)
   --- yaml
   -----------------------------
   hi("@property.yaml", { fg = p.orange })
+
+  -----------------------------
+  --- blink
+  -----------------------------
+  hi("BlinkCmpLabel", { fg = p.fg })
+  hi("BlinkCmpLabelDeprecated", { fg = p.fg })
+  hi("BlinkCmpLabelMatch", { fg = p.cyan })
+  hi("BlinkCmpKind", { fg = p.fg })
+  hi("BlinkCmpKindFunction", { link = "@function" })
+  hi("BlinkCmpKindConstructor", { link = "@type" })
+  hi("BlinkCmpKindVariable", { link = "@variable" })
+  hi("BlinkCmpKindClass", { link = "@type" })
+  hi("BlinkCmpKindInterface", { link = "@type" })
+  hi("BlinkCmpKindModule", { link = "@module" })
+  hi("BlinkCmpKindProperty", { link = "@property" })
+  hi("BlinkCmpKindOperator", { link = "@operator" })
+  hi("BlinkCmpKindReference", { link = "@variable.parameter.reference" })
+  hi("BlinkCmpKindUnit", { link = "@variable.member" })
+  hi("BlinkCmpKindValue", { link = "@variable.member" })
+  hi("BlinkCmpKindField", { link = "@variable.member" })
+  hi("BlinkCmpKindEnum", { link = "@variable.member" })
+  hi("BlinkCmpKindKeyword", { link = "@keyword" })
+  hi("BlinkCmpKindSnippet", { link = "@markup" })
+  hi("BlinkCmpKindColor", { link = "DevIconCss" })
+  hi("BlinkCmpKindFile", { link = "TSURI" })
+  hi("BlinkCmpKindFolder", { link = "TSURI" })
+  hi("BlinkCmpKindEvent", { link = "@constant" })
+  hi("BlinkCmpKindEnumMember", { link = "@variable.member" })
+  hi("BlinkCmpKindConstant", { link = "@constant" })
+  hi("BlinkCmpKindStruct", { link = "@structure" })
+  hi("BlinkCmpKindTypeParameter", { link = "@variable.parameter" })
 end
 
 return M

@@ -7,6 +7,7 @@
 ---@field on_fg string
 ---@field comment string
 ---@field selection string
+---@field cursor string
 ---@field border string
 ---@field line string
 ---@field guide string
@@ -29,10 +30,10 @@ return {
   bg = "#15161b",
   fg = "#ffffff",
   surface = "#08090d",
-  surface2 = "#1e2029",
+  surface2 = "#1b1c21",
   on_fg = "#000000",
   comment = "#5C6773",
-  selection = "#3d424d",
+  selection = "#264f78",
   border = "#a6accd",
   line = "#25282e",
   guide = "#2D3640",
@@ -45,6 +46,7 @@ return {
   light_orange = "#211817",
   cyan = "#7dcfff",
 
+  cursor = "#1e1f24",
   command = "#D2A6FF",
   normal = "#82aaff",
   insert = "#95FB79",
