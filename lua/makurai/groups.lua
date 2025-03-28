@@ -121,6 +121,7 @@ function M.load(p)
     Ignore = { bg = p.orange, fg = p.on_fg },
     Error = { bg = p.light_red, fg = p.on_fg },
     Todo = { bg = p.yellow, fg = p.on_fg },
+    Directory = { fg = p.cyan },
 
     ------------------------------
     --- LSP Highlights
