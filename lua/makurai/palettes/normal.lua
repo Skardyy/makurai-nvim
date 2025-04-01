@@ -11,7 +11,7 @@
 ---@field border string
 ---@field line string
 ---@field guide string
----@field light_red string
+---@field error string
 ---@field purple string
 ---@field green string
 ---@field yellow string
@@ -43,7 +43,7 @@ M.p = {
   border = "#a6accd",
   line = "#25282e",
   guide = "#2D3640",
-  light_red = "#ff6e70",
+  error = "#FF5555",
   purple = "#D2A6FF",
   green = "#95FB79",
   yellow = "#FFEE99",

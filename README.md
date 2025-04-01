@@ -36,7 +36,7 @@ return {
 
 > the below example converts makurai into makurai_less
 ```lua
-require "makurai".modify("makurai", {
+require("makurai").modify("makurai", {
   fg = "#e8e8ea",
   purple = "#FF7733",
   green = "#92c468",
@@ -45,7 +45,6 @@ require "makurai".modify("makurai", {
   orange = "#f7e254",
   light_orange = "#24221a",
 })
-}
 
 ```
 the options are 
@@ -60,7 +59,7 @@ the options are
 * border 
 * line 
 * guide 
-* light_red 
+* error 
 * purple 
 * green 
 * yellow 

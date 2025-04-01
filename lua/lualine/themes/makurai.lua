@@ -8,7 +8,7 @@ return {
   },
   insert = { a = { fg = p.surface, bg = p.insert } },
   visual = { a = { fg = p.surface, bg = p.visual } },
-  replace = { a = { fg = p.surface, bg = p.light_red } },
+  replace = { a = { fg = p.surface, bg = p.error } },
   command = { a = { fg = p.surface, bg = p.command } },
   inactive = {
     a = { fg = p.fg, bg = p.surface },

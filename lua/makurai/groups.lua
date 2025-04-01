@@ -52,13 +52,13 @@ function M.load(p)
     ------------------------------
     DiffAdd = { fg = p.insert },
     DiffChange = { fg = p.visual },
-    DiffDelete = { fg = p.light_red },
+    DiffDelete = { fg = p.error },
     DiffText = { link = "Identifier" },
 
     ------------------------------
     --- Message and Warning Highlights
     ------------------------------
-    ErrorMsg = { fg = p.light_red },
+    ErrorMsg = { fg = p.error },
     ModeMsg = { fg = p.insert },
     MsgArea = { link = "Function" },
     MsgSeparator = { fg = p.border },
@@ -119,7 +119,7 @@ function M.load(p)
     ------------------------------
     Underlined = { fg = p.cyan, underline = true },
     Ignore = { bg = p.orange, fg = p.on_fg },
-    Error = { bg = p.light_red, fg = p.on_fg },
+    Error = { bg = p.error, fg = p.on_fg },
     Todo = { bg = p.yellow, fg = p.on_fg },
     Directory = { fg = p.cyan },
 
@@ -132,7 +132,7 @@ function M.load(p)
     ----------------------
     -- Diagnostic
     ----------------------
-    DiagnosticError = { fg = p.light_red },
+    DiagnosticError = { fg = p.error },
     DiagnosticWarn = { fg = p.visual },
     DiagnosticInfo = { fg = p.cyan },
     DiagnosticHint = { fg = p.cyan },
@@ -222,7 +222,7 @@ function M.load(p)
     -----------------------------
     GitSignsAdd = { fg = p.insert },
     GitSignsChange = { fg = p.visual },
-    GitSignsDelete = { fg = p.light_red },
+    GitSignsDelete = { fg = p.error },
 
     -----------------------------
     --- Telescope
@@ -313,6 +313,14 @@ function M.load(p)
     BlinkCmpKindTypeParameter = { link = "@variable.parameter" },
     BlinkCmpDocBorder = { link = "FloatBorder" },
     BlinkCmpMenuBorder = { link = "PmenuBorder" },
+
+    -----------------------------
+    --- Spell
+    -----------------------------
+    SpellBad = { sp = p.error, undercurl = true },
+    SpellCap = { sp = p.visual, undercurl = true },
+    SpellLocal = { sp = p.blue, undercurl = true },
+    SpellRare = { sp = p.blue, undercurl = true },
   }
 end
 
