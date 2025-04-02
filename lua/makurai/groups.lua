@@ -137,6 +137,7 @@ function M.load(p)
     DiagnosticInfo = { fg = p.cyan },
     DiagnosticHint = { fg = p.cyan },
     DiagnosticOk = { fg = p.insert },
+    DiagnosticUnderLineError = { sp = p.error, undercurl = true },
     -- DiagnosticVirtualTextError { } , -- Used for "Error" diagnostic virtual text.
     -- DiagnosticVirtualTextWarn  { } , -- Used for "Warn" diagnostic virtual text.
     -- DiagnosticVirtualTextInfo  { } , -- Used for "Info" diagnostic virtual text.
