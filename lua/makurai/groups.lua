@@ -73,6 +73,7 @@ function M.load(p)
     SignColumn = {},
     Winseparator = { fg = p.border },
     Whitespace = { fg = p.guide },
+    NonText = { fg = p.guide },
 
     ------------------------------
     --- Popup Menu Highlights
