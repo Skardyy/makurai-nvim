@@ -50,9 +50,9 @@ function M.load(p)
     ------------------------------
     --- Diff and Change Highlights
     ------------------------------
-    DiffAdd = { fg = p.insert },
-    DiffChange = { fg = p.visual },
-    DiffDelete = { fg = p.error },
+    DiffAdd = { bg = p.dark_green },
+    DiffChange = { bg = p.dark_yellow },
+    DiffDelete = { bg = p.dark_red, fg = p.dark_red },
     DiffText = { link = "Identifier" },
 
     ------------------------------

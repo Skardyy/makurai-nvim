@@ -23,6 +23,9 @@
 ---@field normal string
 ---@field insert string
 ---@field visual string
+---@field dark_green string
+---@field dark_red string
+---@field dark_yellow string
 
 ---@class Makurai.theme
 ---@field get fun(): Makurai.Palette
@@ -56,7 +59,10 @@ M.p = {
   command = "#D2A6FF",
   normal = "#82aaff",
   insert = "#95FB79",
-  visual = "#FFEE99"
+  visual = "#FFEE99",
+  dark_green = "#023020",
+  dark_red = "#480809",
+  dark_yellow = "#857c4d"
 }
 
 M.copy = vim.deepcopy(M.p)
