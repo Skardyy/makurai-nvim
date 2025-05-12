@@ -18,17 +18,15 @@ function M.load(p)
     --- Normal Highlights
     ------------------------------
     Normal = { bg = opts.transparent and "none" or p.bg, fg = p.fg },
-    NormalFloat = { bg = p.surface },
-    FloatBorder = { fg = p.border, bg = p.surface },
+    NormalFloat = { bg = p.bg_alt },
+    FloatBorder = { fg = p.border, bg = p.bg_alt },
 
     ------------------------------
     --- Cursor and Line Highlights
     ------------------------------
-    CursorLineNr = { link = "Comment" },
+    CursorLineNr = { fg = p.line },
     CursorLine = { bg = p.cursor },
-    LineNr = { fg = p.line },
-    LineNrAbove = { fg = p.line },
-    LineNrBelow = { fg = p.line },
+    LineNr = { fg = p.LineNr },
 
     ------------------------------
     --- Status and Tabline Highlights
@@ -37,7 +35,7 @@ function M.load(p)
     StatusLineNC = { bg = p.surface, fg = p.comment },
     TabLine = { bg = p.surface, fg = p.comment },
     TabLineFill = {},
-    TabLineSel = { bg = p.surface2, fg = p.fg },
+    TabLineSel = { bg = p.bg_alt, fg = p.fg },
 
     ------------------------------
     --- Seleciton
@@ -74,13 +72,15 @@ function M.load(p)
     Winseparator = { fg = p.border },
     Whitespace = { fg = p.guide },
     NonText = { fg = p.guide },
+    IblScope = { fg = p.guide },
+    ["@ibl.scope.char.1"] = { fg = p.guide },
 
     ------------------------------
     --- Popup Menu Highlights
     ------------------------------
-    Pmenu = { bg = p.surface2 },
+    Pmenu = { bg = p.surface_alt },
     PmenuSel = { bg = p.selection },
-    PmenuBorder = { fg = p.border, bg = p.surface2 },
+    PmenuBorder = { fg = p.border, bg = p.surface_alt },
 
     ------------------------------
     --- Syntax Highlights

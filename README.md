@@ -2,19 +2,24 @@
 <div align="center">
 <p align="center">A simple, bright and lively dark theme for neovim</p> 
     
-[![Static Badge](https://img.shields.io/badge/Main%20Repo-1e2029?logo=github&label=Part%20of&labelColor=15161b)](https://github.com/Skardyy/makurai-theme) ˙ [![Static Badge](https://img.shields.io/badge/neovim-1e2029?logo=neovim&label=built%20for&labelColor=15161b)](https://neovim.io)
+[![Static Badge](https://img.shields.io/badge/main%20repo-D2A6FF?style=for-the-badge&label=Check%20the&labelColor=1e2029)](https://github.com/Skardyy/makurai-theme)
 </div>
 
 ---
 ```lua
-vim.cmd.colorscheme("makurai")
+vim.cmd.colorscheme("makurai_mage")
 ```
 ![image](https://github.com/user-attachments/assets/2024cb16-1e36-493a-90bd-7d07cbdf051e)  
 
 ```lua
-vim.cmd.colorscheme("makurai_less")
+vim.cmd.colorscheme("makurai_rogue")
 ```
 ![image](https://github.com/user-attachments/assets/08c7c6da-2c70-4a0b-a299-1f1f760416ec)
+
+```lua
+vim.cmd.colorscheme("makurai_healer")
+```
+![image](https://github.com/user-attachments/assets/5e3ae7db-1190-4d43-b3d7-738d19c28f3c)
 
 ## 🚀 Installation   
 lazy:  
@@ -27,16 +32,16 @@ return {
       transparent = false -- removes the bg color
     })
 
-    vim.cmd.colorscheme("makurai")
+    vim.cmd.colorscheme("makurai_mage")
   end
 }
 ```
 <details>
 <summary>⚙️ Overriding the palette </summary>
 
-> the below example converts makurai into makurai_less
+> the below example converts makurai_mage into makurai_rogue
 ```lua
-require("makurai").modify("makurai", {
+require("makurai").modify("mage", {
   fg = "#e8e8ea",
   purple = "#FF7733",
   green = "#92c468",
@@ -48,29 +53,35 @@ require("makurai").modify("makurai", {
 
 ```
 the options are 
-* bg 
-* fg 
-* surface 
-* surface2 
-* on_fg 
-* comment 
-* selection 
-* cursor 
-* border 
-* line 
-* guide 
-* error 
-* purple 
-* green 
-* yellow 
-* blue 
-* orange 
-* light_orange 
-* cyan 
-* command 
-* normal 
-* insert 
-* visual 
+  * fg
+  * bg
+  * surface
+  * bg_alt
+  * surface_alt
+  * on_fg
+  * comment
+  * selection
+  * border
+  * line
+  * LineNr
+  * guide
+  * error
+  * purple
+  * green
+  * yellow
+  * blue
+  * orange
+  * light_orange
+  * cyan
+  * cursor
+  * command
+  * normal
+  * insert
+  * visual
+  * dark_green
+  * dark_red
+  * dark_yellow
+
 </details>
 
 check the main repo [here](https://github.com/Skardyy/makurai-theme)

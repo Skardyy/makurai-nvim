@@ -2,8 +2,9 @@
 ---@field name string
 ---@field bg string
 ---@field fg string
+---@field bg_alt string
 ---@field surface string
----@field surface2 string
+---@field surface_alt string
 ---@field on_fg string
 ---@field comment string
 ---@field selection string
@@ -35,16 +36,19 @@ local M = {}
 
 ---@type Makurai.Palette
 M.p = {
-  name = "makurai",
-  bg = "#15161b",
+  name = "makurai_mage",
+  mode = "dark",
   fg = "#ffffff",
+  bg = "#15161b",
   surface = "#08090d",
-  surface2 = "#1b1c21",
+  bg_alt = "#14161f",
+  surface_alt = "#20202b",
   on_fg = "#000000",
   comment = "#5C6773",
   selection = "#264f78",
   border = "#a6accd",
-  line = "#25282e",
+  line = "#2D3640",
+  LineNr = "#25282e",
   guide = "#2D3640",
   error = "#FF5555",
   purple = "#D2A6FF",
@@ -65,7 +69,8 @@ M.p = {
   dark_yellow = "#857c4d"
 }
 
-M.copy = vim.deepcopy(M.p)
+M.copy_rogue = vim.deepcopy(M.p)
+M.copy_mage = vim.deepcopy(M.p)
 
 ---@return Makurai.Palette
 function M.get()

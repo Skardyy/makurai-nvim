@@ -15,14 +15,13 @@ end
 
 ---@param variant "makurai"|"makurai_less"
 function M.modify(variant, pal)
-  if variant ~= "makurai" and variant ~= "makurai_less" then
+  if variant ~= "mage" and variant ~= "rogue" and variant ~= "healer" then
     vim.schedule(function()
-      vim.notify("modify key needs to be 'makurai' | 'makurai_less'", vim.log.levels.ERROR)
+      vim.notify("modify key needs to be 'makurai_mage' | 'makurai_rogue' | 'makurai_healer", vim.log.levels.ERROR)
     end)
     return
   end
 
-  local var = variant == "makurai" and "normal" or "silent"
   local theme = require("makurai.palettes." .. var)
   theme.extend(pal)
 end

@@ -1,9 +1,9 @@
-local base = require "makurai.palettes.normal".copy
+local base = require "makurai.palettes.mage".copy_rogue
 local M = {}
 
 ---@type Makurai.Palette
 M.p = vim.tbl_deep_extend("force", base, {
-  name = "makurai_less",
+  name = "makurai_rogue",
   fg = "#e8e8ea",
   purple = "#FF7733",
   green = "#92c468",
@@ -11,6 +11,11 @@ M.p = vim.tbl_deep_extend("force", base, {
   blue = "#8e8e90",
   orange = "#f7e254",
   light_orange = "#24221a",
+
+  command = "#FF7733",
+  normal = "#8e8e90",
+  insert = "#92c468",
+  visual = "#f7e254",
 })
 
 

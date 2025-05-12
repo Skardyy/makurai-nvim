@@ -6,7 +6,7 @@ function M.load(p)
     vim.cmd("hi clear")
   end
 
-  vim.opt.background = "dark"
+  vim.opt.background = p.mode
   vim.g.colors_name = p.name
   vim.o.termguicolors = true
 
