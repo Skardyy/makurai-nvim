@@ -22,8 +22,9 @@ M.p = vim.tbl_deep_extend("force", base, {
   LineNr = "#262626",
   guide = "#3A3A3A",
   cursor = "#262623",
+  selection = "#2A5B66",
 
-  command = "#D2A6FF",
+  command = "#FF875F",
   normal = "#76B6C7",
   insert = "#87FF87",
   visual = "#FFFF87",
