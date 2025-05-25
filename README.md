@@ -17,9 +17,23 @@ vim.cmd.colorscheme("makurai_rogue")
 ![image](https://github.com/user-attachments/assets/08c7c6da-2c70-4a0b-a299-1f1f760416ec)
 
 ```lua
+vim.cmd.colorscheme("makurai_druid")
+```
+![image](https://github.com/user-attachments/assets/658e2c40-72da-49a8-a248-4cbbeb6f85d6)
+
+```lua
 vim.cmd.colorscheme("makurai_healer")
 ```
+
+<div align="center">
+<details>
+<summary>🚧 Light Theme Alert 🚧</summary>
+
 ![image](https://github.com/user-attachments/assets/5e3ae7db-1190-4d43-b3d7-738d19c28f3c)
+
+</details>
+</div>
+
 
 ## 🚀 Installation   
 lazy:  
