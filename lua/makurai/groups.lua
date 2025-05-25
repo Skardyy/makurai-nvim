@@ -134,7 +134,7 @@ function M.load(p)
     -- Diagnostic
     ----------------------
     DiagnosticError = { fg = p.error },
-    DiagnosticWarn = { fg = p.visual },
+    DiagnosticWarn = { fg = p.yellow },
     DiagnosticInfo = { fg = p.cyan },
     DiagnosticHint = { fg = p.cyan },
     DiagnosticOk = { fg = p.insert },
