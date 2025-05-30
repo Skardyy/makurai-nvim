@@ -27,6 +27,8 @@
 ---@field dark_green string
 ---@field dark_red string
 ---@field dark_yellow string
+---@field dark_cyan string
+---@field warning string
 
 ---@class Makurai.theme
 ---@field get fun(): Makurai.Palette
@@ -57,16 +59,19 @@ M.p = {
   blue = "#82aaff",
   orange = "#FF7733",
   light_orange = "#211817",
-  cyan = "#7dcfff",
+  cyan = "#66BFFF",
 
   cursor = "#1e1f24",
   command = "#D2A6FF",
   normal = "#82aaff",
   insert = "#95FB79",
   visual = "#FFEE99",
-  dark_green = "#023020",
-  dark_red = "#480809",
-  dark_yellow = "#857c4d"
+
+  dark_green = "#0F2614",
+  dark_red = "#330A0A",
+  dark_yellow = "#2B1A00",
+  dark_cyan = "#0D1A26",
+  warning = "#FFB84D",
 }
 
 M.copy_rogue = vim.deepcopy(M.p)

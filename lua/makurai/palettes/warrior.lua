@@ -12,14 +12,15 @@ M.p = vim.tbl_deep_extend("force", base, {
   purple = "#FF875F",
 
   bg = "#14161f",
-  surface = "#08090d",
   bg_alt = "#15161b",
-  surface_alt = "#20202b",
 
   command = "#dc74ed",
   normal = "#789CEA",
   insert = "#98eb7a",
   visual = "#F4C367",
+
+  dark_yellow = "#2A2500",
+  warning = "#FFE566",
 })
 
 

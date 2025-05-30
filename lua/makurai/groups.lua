@@ -62,7 +62,7 @@ function M.load(p)
     MsgSeparator = { fg = p.border },
     Question = { link = "Function" },
     QuickFixLine = { link = "Function" },
-    WarningMsg = { link = "Function" },
+    WarningMsg = { fg = p.warning },
 
     ------------------------------
     --- Window and Separator Highlights
@@ -134,11 +134,11 @@ function M.load(p)
     -- Diagnostic
     ----------------------
     DiagnosticError = { fg = p.error },
-    DiagnosticWarn = { fg = p.yellow },
+    DiagnosticWarn = { fg = p.warning },
     DiagnosticInfo = { fg = p.cyan },
     DiagnosticHint = { fg = p.cyan },
     DiagnosticOk = { fg = p.insert },
-    DiagnosticUnderLineError = { sp = p.error, undercurl = true },
+    -- DiagnosticUnderLineError = { sp = p.error, undercurl = true },
     -- DiagnosticVirtualTextError { } , -- Used for "Error" diagnostic virtual text.
     -- DiagnosticVirtualTextWarn  { } , -- Used for "Warn" diagnostic virtual text.
     -- DiagnosticVirtualTextInfo  { } , -- Used for "Info" diagnostic virtual text.
