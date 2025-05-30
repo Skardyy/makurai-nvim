@@ -7,13 +7,13 @@ M.p = vim.tbl_deep_extend("force", base, {
   fg = "#e8e8ea",
   purple = "#FF875F",
   green = "#92c468",
-  yellow = "#9d9eb0",
-  blue = "#8e8e90",
+  yellow = "#95A4C6",
+  blue = "#C4873A",
   orange = "#f7e254",
   light_orange = "#24221a",
 
-  command = "#FF875F",
-  normal = "#8e8e90",
+  command = "#C4873A",
+  normal = "#95A4C6",
   insert = "#92c468",
   visual = "#f7e254",
 })
