@@ -110,5 +110,3 @@ the options are
 </details>
 
 check the main repo [here](https://github.com/Skardyy/makurai-theme)
-
-<p align="center">no usuage is not a real word..</p>
