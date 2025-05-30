@@ -211,6 +211,7 @@ function M.load(p)
     ["@type.definition"] = { fg = p.blue },
     ["@storageclass"] = { fg = p.blue },
     ["@structure"] = { fg = p.blue },
+    ["@module"] = { fg = p.blue  },
     ["@namespace"] = { link = "Identifier" },
     ["@include"] = { link = "Identifier" },
     ["@preproc"] = { link = "Identifier" },
