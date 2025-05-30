@@ -22,7 +22,7 @@ function M.modify(variant, pal)
     return
   end
 
-  local theme = require("makurai.palettes." .. var)
+  local theme = require("makurai.palettes." .. variant)
   theme.extend(pal)
 end
 
