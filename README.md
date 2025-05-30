@@ -2,7 +2,7 @@
 <div align="center">
 <p align="center">A simple, bright and lively dark theme for neovim</p> 
     
-[![Static Badge](https://img.shields.io/badge/main%20repo-D2A6FF?style=for-the-badge&label=Check%20the&labelColor=1e2029)](https://github.com/Skardyy/makurai-theme)
+[![Static Badge](https://img.shields.io/badge/Click%20Here-D2A6FF?style=for-the-badge&label=For%20Extras&labelColor=1e2029)](https://github.com/Skardyy/makurai-theme)
 </div>
 
 ---
