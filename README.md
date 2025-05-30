@@ -26,12 +26,12 @@ vim.cmd.colorscheme("makurai_rogue")
 </details>
 
 <details>
-<summary>Druid</summary>
+<summary>Warrior</summary>
 
 ```lua
-vim.cmd.colorscheme("makurai_druid")
+vim.cmd.colorscheme("makurai_warrior")
 ```
-![image](https://github.com/user-attachments/assets/9156f0cf-e0af-43b7-a641-79005abc8281)
+![image](https://github.com/user-attachments/assets/33aa84bc-909b-470a-b098-0296810a7069)
 </details>
 
 
