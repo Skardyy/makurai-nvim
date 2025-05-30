@@ -1,4 +1,4 @@
-local p = require "makurai.palettes.druid".get()
+local p = require "makurai.palettes.warrior".get()
 
 return {
   normal = {
