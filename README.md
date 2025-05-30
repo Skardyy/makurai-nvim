@@ -6,33 +6,44 @@
 </div>
 
 ---
+
+<details>
+<summary>Mage</summary>
+
 ```lua
 vim.cmd.colorscheme("makurai_mage")
 ```
-![image](https://github.com/user-attachments/assets/2024cb16-1e36-493a-90bd-7d07cbdf051e)  
+![image](https://github.com/user-attachments/assets/477000d5-b062-40fb-90cc-bb05217298d8)
+</details>
+
+<details>
+<summary>Rogue</summary>
 
 ```lua
 vim.cmd.colorscheme("makurai_rogue")
 ```
-![image](https://github.com/user-attachments/assets/08c7c6da-2c70-4a0b-a299-1f1f760416ec)
+![image](https://github.com/user-attachments/assets/2565480a-805f-498c-af0f-331b4877752c)
+</details>
+
+<details>
+<summary>Druid</summary>
 
 ```lua
 vim.cmd.colorscheme("makurai_druid")
 ```
-![image](https://github.com/user-attachments/assets/658e2c40-72da-49a8-a248-4cbbeb6f85d6)
+![image](https://github.com/user-attachments/assets/9156f0cf-e0af-43b7-a641-79005abc8281)
+</details>
+
+
+
+<details>
+<summary>Healer</summary>
 
 ```lua
 vim.cmd.colorscheme("makurai_healer")
-```
-
-<div align="center">
-<details>
-<summary>🚧 Light Theme Alert 🚧</summary>
-
-![image](https://github.com/user-attachments/assets/5e3ae7db-1190-4d43-b3d7-738d19c28f3c)
-
+``` 
+![image](https://github.com/user-attachments/assets/382137a1-cdc5-4617-9467-3aad60cb608f)
 </details>
-</div>
 
 
 ## 🚀 Installation   
