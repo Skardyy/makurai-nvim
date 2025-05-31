@@ -77,36 +77,6 @@ require("makurai").modify("mage", {
 })
 
 ```
-the options are 
-  * fg
-  * bg
-  * surface
-  * bg_alt
-  * surface_alt
-  * on_fg
-  * comment
-  * selection
-  * border
-  * line
-  * LineNr
-  * guide
-  * error
-  * purple
-  * green
-  * yellow
-  * blue
-  * orange
-  * light_orange
-  * cyan
-  * cursor
-  * command
-  * normal
-  * insert
-  * visual
-  * dark_green
-  * dark_red
-  * dark_yellow
+the options are everything in the palette [here](./lua/makurai/palettes/mage.lua#L40)
 
 </details>
-
-check the main repo [here](https://github.com/Skardyy/makurai-theme)
