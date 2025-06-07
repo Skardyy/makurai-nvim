@@ -129,6 +129,8 @@ function M.load(p)
     ------------------------------
     LspReferenceText = { link = "Identifier" },
     ["@lsp.type.namespace"] = { link = "Identifier" },
+    ["@lsp.typemod.variable.callable"] = { link = "Function" },
+    ["@lsp.mod.callable"] = { link = "Function" },
 
     ----------------------
     -- Diagnostic
