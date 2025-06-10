@@ -3,8 +3,9 @@ local p = require "makurai.palettes.warrior".get()
 return {
   normal = {
     a = { fg = p.on_fg, bg = p.normal },
-    b = { fg = p.fg, bg = p.surface },
-    c = { fg = p.fg, bg = p.surface },
+    b = { fg = p.fg, bg = p.lualine_island },
+    c = { fg = p.fg, bg = p.cursor },
+    x = { fg = p.fg, bg = p.lualine_island },
   },
   insert = { a = { fg = p.surface, bg = p.insert } },
   visual = { a = { fg = p.surface, bg = p.visual } },
