@@ -27,7 +27,6 @@
 ---@field dark_green string
 ---@field dark_red string
 ---@field dark_yellow string
----@field lualine_island string
 ---@field dark_cyan string
 ---@field warning string
 
@@ -63,7 +62,6 @@ M.p = {
   cyan = "#66BFFF",
 
   cursor = "#1e1f24",
-  lualine_island = "#2d2f3b",
   command = "#D2A6FF",
   normal = "#82aaff",
   insert = "#95FB79",

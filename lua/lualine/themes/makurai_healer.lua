@@ -3,9 +3,9 @@ local p = require "makurai.palettes.healer".get()
 return {
   normal = {
     a = { fg = p.on_fg, bg = p.normal },
-    b = { fg = p.fg, bg = p.lualine_island },
-    c = { fg = p.fg, bg = p.cursor },
-    x = { fg = p.fg, bg = p.lualine_island },
+    b = { fg = p.fg, bg = p.surface_alt },
+    c = { fg = p.fg, bg = p.surface },
+    y = { fg = p.fg, bg = p.surface_alt },
   },
   insert = { a = { fg = p.surface, bg = p.insert } },
   visual = { a = { fg = p.surface, bg = p.visual } },
