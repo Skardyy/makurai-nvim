@@ -13,7 +13,7 @@
 ```lua
 vim.cmd.colorscheme("makurai_mage")
 ```
-![image](https://github.com/user-attachments/assets/477000d5-b062-40fb-90cc-bb05217298d8)
+![image](https://github.com/user-attachments/assets/01501016-e0b4-4b30-a92e-0d7730559ab1)
 </details>
 
 <details>
@@ -22,7 +22,7 @@ vim.cmd.colorscheme("makurai_mage")
 ```lua
 vim.cmd.colorscheme("makurai_rogue")
 ```
-![image](https://github.com/user-attachments/assets/2565480a-805f-498c-af0f-331b4877752c)
+![image](https://github.com/user-attachments/assets/a40a2ca0-d064-40f4-8e9b-5d7cfea4c768)
 </details>
 
 <details>
@@ -31,7 +31,7 @@ vim.cmd.colorscheme("makurai_rogue")
 ```lua
 vim.cmd.colorscheme("makurai_warrior")
 ```
-![image](https://github.com/user-attachments/assets/33aa84bc-909b-470a-b098-0296810a7069)
+![image](https://github.com/user-attachments/assets/4508ea6a-ac04-42f1-82bc-8d903b93531a)
 </details>
 
 
