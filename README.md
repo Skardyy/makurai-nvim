@@ -31,7 +31,7 @@ vim.cmd.colorscheme("makurai_rogue")
 ```lua
 vim.cmd.colorscheme("makurai_warrior")
 ```
-![image](https://github.com/user-attachments/assets/da17fa8b-68cc-428a-a05b-3c8b2e6c69e0)
+![image](https://github.com/user-attachments/assets/877b44dc-017a-49d3-9750-590762923bb6)
 </details>
 
 
