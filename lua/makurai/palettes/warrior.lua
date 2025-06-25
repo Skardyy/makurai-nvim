@@ -17,8 +17,7 @@ M.p = vim.tbl_deep_extend("force", base, {
   insert = "#92c468",
   visual = "#F4C367",
 
-  dark_yellow = "#2A2500",
-  warning = "#FFE566",
+  error = "#fc4747",
 })
 
 
