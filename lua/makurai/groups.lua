@@ -233,7 +233,7 @@ function M.load(p)
     -----------------------------
     --- WhichKey
     -----------------------------
-    WhichKeyNormal = { link = "Pmenu" },
+    WhichKeyNormal = { bg = p.surface_alt },
     WhichKeyValue = { link = "Identifier" },
     WhichKeySeparator = { link = "Identifier" },
 
@@ -241,7 +241,7 @@ function M.load(p)
     --- ToggleTerm
     -----------------------------
     ToggleTerm = { link = "Pmenu" },
-    ToggleTermBorder = { fg = p.border },
+    ToggleTermBorder = { link = "PmenuBorder" },
 
     -----------------------------
     --- Lazy
@@ -271,7 +271,7 @@ function M.load(p)
     RenderMarkdownH4Bg = { link = "RenderMarkdownH1Bg" },
     RenderMarkdownH5Bg = { link = "RenderMarkdownH1Bg" },
     RenderMarkdownH6Bg = { link = "RenderMarkdownH1Bg" },
-    RenderMarkdownCode = { link = "Pmenu" },
+    RenderMarkdownCode = { bg = p.surface_alt },
     RenderMarkdownBullet = { link = "Function" },
     RenderMarkdownQuote = { link = "Function" },
     RenderMarkdownTableRow = { link = "Function" },
