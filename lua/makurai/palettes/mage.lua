@@ -76,6 +76,8 @@ M.p = {
 
 M.copy_rogue = vim.deepcopy(M.p)
 M.copy_mage = vim.deepcopy(M.p)
+M.copy_healer = vim.deepcopy(M.p)
+M.copy_warrior = vim.deepcopy(M.p)
 
 ---@return Makurai.Palette
 function M.get()

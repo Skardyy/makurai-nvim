@@ -1,4 +1,4 @@
-local base = require "makurai.palettes.mage".copy_rogue
+local base = require "makurai.palettes.mage".copy_healer
 local M = {}
 
 ---@type Makurai.Palette
