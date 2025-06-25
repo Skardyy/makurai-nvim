@@ -19,8 +19,11 @@ function M.load(p)
     --- Normal Highlights
     ------------------------------
     Normal = { bg = opts.transparent and "none" or p.bg, fg = p.fg },
-    NormalFloat = { bg = p.bg_alt },
-    FloatBorder = { fg = p.border, bg = p.bg_alt },
+    NormalFloat = { bg = opts.bordered and "none" or p.bg_alt },
+    FloatBorder = { fg = p.border, bg = opts.bordered and "none" or p.bg_alt },
+    Pmenu = { bg = opts.bordered and "none" or p.surface_alt },
+    PmenuSel = { bg = p.selection },
+    PmenuBorder = { fg = p.border, bg = opts.bordered and "none" or p.surface_alt },
 
     ------------------------------
     --- Cursor and Line Highlights
@@ -75,13 +78,6 @@ function M.load(p)
     NonText = { fg = p.guide },
     IblScope = { fg = p.guide },
     ["@ibl.scope.char.1"] = { fg = p.guide },
-
-    ------------------------------
-    --- Popup Menu Highlights
-    ------------------------------
-    Pmenu = { bg = p.surface_alt },
-    PmenuSel = { bg = p.selection },
-    PmenuBorder = { fg = p.border, bg = p.surface_alt },
 
     ------------------------------
     --- Syntax Highlights
@@ -250,7 +246,7 @@ function M.load(p)
     -----------------------------
     --- Lazy
     -----------------------------
-    LazyNormal = { link = "Pmenu" },
+    LazyNormal = { bg = p.surface_alt },
     LazyButton = { link = "Identifier" },
     LazyButtonActive = { fg = p.fg, bg = p.selection, bold = true },
     LazyH1 = { fg = p.orange, bold = true },

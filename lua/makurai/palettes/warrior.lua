@@ -5,14 +5,12 @@ local M = {}
 M.p = vim.tbl_deep_extend("force", base, {
   name = "makurai_warrior",
   fg = "#FFFFFF",
-  orange = "#dc74ed",
-  yellow = "#789CEA",
-  green = "#98eb7a",
+  orange = "#ff5f5f",
+  yellow = "#92c468",
   blue = "#F4C367",
-  purple = "#FF875F",
 
-  bg = "#14161f",
-  bg_alt = "#15161b",
+  green = "#FFEE99",
+  purple = "#a8ceba",
 
   command = "#dc74ed",
   normal = "#789CEA",

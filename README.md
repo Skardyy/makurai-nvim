@@ -55,6 +55,7 @@ return {
     -- you don't have to call setup
     require "makurai".setup({
       transparent = false -- removes the bg color
+      bordered = false -- removes the bg color from floats/popups
     })
 
     vim.cmd.colorscheme("makurai_mage")

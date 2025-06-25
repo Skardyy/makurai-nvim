@@ -2,10 +2,12 @@ local M = {}
 
 ---@class Makurai.config
 ---@field transparent boolean
+---@field bordered boolean
 
 ---@type Makurai.config
 M.opts = {
-  transparent = false
+  transparent = false,
+  bordered = false
 }
 
 ---@return Makurai.config opts
@@ -15,13 +17,7 @@ end
 
 ---@param user_opts table
 function M.extend(user_opts)
-  if type(user_opts) ~= "table" then
-    return
-  end
-
-  if type(user_opts.transparent) == "boolean" then
-    M.opts.transparent = user_opts.transparent
-  end
+  M.opts = vim.tbl_deep_extend('force', M.opts, user_opts)
 end
 
 return M
