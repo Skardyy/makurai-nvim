@@ -1,9 +1,9 @@
-local base = require "makurai.palettes.mage".copy_healer
+local base = require "makurai.palettes.dark".copy_light
 local M = {}
 
 ---@type Makurai.Palette
 M.p = vim.tbl_deep_extend("force", base, {
-  name         = "makurai_healer",
+  name         = "makurai_light",
   mode         = "light",
 
   orange       = "#E35043",

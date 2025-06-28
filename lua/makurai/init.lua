@@ -1,6 +1,6 @@
 local M = {}
 
----@param variant "normal"|"silent"
+--- @param variant "dark"|"light"|"autumn"|"spring"
 function M.load(variant)
   ---@type Makurai.theme
   local theme = require("makurai.palettes." .. variant)
@@ -13,11 +13,11 @@ function M.setup(user_opts)
   require "makurai.config".extend(user_opts)
 end
 
----@param variant "makurai"|"makurai_less"
+---@param variant "dark"|"light"|"autumn"|"spring"
 function M.modify(variant, pal)
-  if variant ~= "mage" and variant ~= "rogue" and variant ~= "healer" and variant ~= "warrior" then
+  if variant ~= "dark" and variant ~= "light" and variant ~= "autumn" and variant ~= "spring" then
     vim.schedule(function()
-      vim.notify("modify key needs to be 'makurai_mage' | 'makurai_rogue' | 'makurai_healer", vim.log.levels.ERROR)
+      vim.notify("modify key needs to be 'dark' | 'light' | 'autumn | 'spring'", vim.log.levels.ERROR)
     end)
     return
   end

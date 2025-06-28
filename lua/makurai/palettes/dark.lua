@@ -1,5 +1,6 @@
 ---@class Makurai.Palette
 ---@field name string
+---@field mode string
 ---@field bg string
 ---@field fg string
 ---@field bg_alt string
@@ -38,7 +39,7 @@ local M = {}
 
 ---@type Makurai.Palette
 M.p = {
-  name = "makurai_mage",
+  name = "makurai_dark",
   mode = "dark",
   fg = "#ffffff",
   bg = "#15161b",
@@ -74,10 +75,9 @@ M.p = {
   warning = "#FFB84D",
 }
 
-M.copy_rogue = vim.deepcopy(M.p)
-M.copy_mage = vim.deepcopy(M.p)
-M.copy_healer = vim.deepcopy(M.p)
-M.copy_warrior = vim.deepcopy(M.p)
+M.copy_light = vim.deepcopy(M.p)
+M.copy_autumn = vim.deepcopy(M.p)
+M.copy_spring = vim.deepcopy(M.p)
 
 ---@return Makurai.Palette
 function M.get()
