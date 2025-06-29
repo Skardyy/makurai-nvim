@@ -30,6 +30,7 @@
 ---@field dark_yellow string
 ---@field dark_cyan string
 ---@field warning string
+---@field LineNr string
 
 ---@class Makurai.theme
 ---@field get fun(): Makurai.Palette

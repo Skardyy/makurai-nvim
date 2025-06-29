@@ -159,6 +159,13 @@ function M.load(p)
     -- DiagnosticSignOk           { } , -- Used for "Ok" signs in sign column.
 
     -----------------------------------
+    -- HTML syntax groups.
+    -----------------------------------
+    cssBraces = { link = "Identifier" },
+    htmlTag = { link = "Identifier" },
+    htmlHead = { link = "Identifier" },
+
+    -----------------------------------
     -- Markdown syntax groups.
     -----------------------------------
     ["@markup.heading"] = { link = "Keyword" },
