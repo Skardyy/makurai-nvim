@@ -1,6 +1,7 @@
-<h1 align="center">Makurai Theme</h1>  
 <div align="center">
-<p align="center">A simple, bright and lively theme for neovim</p> 
+    
+# Makurai Theme
+***Minimal highlighting with maximum clarity***
     
 [![Static Badge](https://img.shields.io/badge/Click%20Here-fac25a?style=for-the-badge&label=For%20Extras&labelColor=1e2029)](https://github.com/Skardyy/makurai-theme)
 </div>
