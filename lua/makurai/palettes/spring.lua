@@ -6,7 +6,7 @@ M.p = vim.tbl_deep_extend("force", base, {
   name    = "makurai_spring",
   orange  = "#FFB347",
   yellow  = "#D4FF59",
-  green   = "#8CEB3A",
+  green   = "#37dbb5",
   purple  = "#D8A5FF",
   blue    = "#66E6FF",
 
