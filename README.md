@@ -64,7 +64,7 @@ return {
 <details>
 <summary>⚙️ Overriding the palette </summary>
 
-> the below example converts makurai_dark into makurai_spring
+> the below example "converts" makurai_dark into makurai_spring
 ```lua
 require("makurai").modify("dark", {
   orange  = "#FFB347",
@@ -75,7 +75,7 @@ require("makurai").modify("dark", {
 })
 
 ```
-the options are everything in the palette [here](./lua/makurai/palettes/mage.lua#L40)
+the options are everything in the palette [here](./lua/makurai/palettes/dark.lua#L1)
 
 </details>
 
@@ -88,4 +88,4 @@ The core philosophy behind this theme is minimal highlighting with maximum clari
 4. Blue – Types, modules, interfaces, structs, namespaces..
 5. Purple – Constants, enums, numbers..
 
-All other elements remain in white to reduce visual noise and maintain focus.
+All other elements remain in white to reduce visual noise.
