@@ -32,11 +32,12 @@
 ---@field warning string
 ---@field LineNr string
 ---@field dir string
+---@field match string
 
 ---@class Makurai.theme
 ---@field get fun(): Makurai.Palette
 ---@field extend fun(o: Makurai.Palette)
-
+---@field p Makurai.Palette
 local M = {}
 
 ---@type Makurai.Palette
@@ -64,6 +65,7 @@ M.p = {
   light_orange = "#211817",
   cyan = "#66BFFF",
   dir = "#66BFFF",
+  match = "#66BFFF",
 
   cursor = "#1e1f24",
   command = "#D2A6FF",

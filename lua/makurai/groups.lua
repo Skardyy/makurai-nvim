@@ -350,7 +350,7 @@ function M.load(p)
     CmpItemKindEvent = { link = "Keyword" },
     CmpItemKindOperator = { link = "Keyword" },
     CmpItemKindTypeParameter = { link = "Identifier" },
-    CmpItemAbbrMatch = { fg = p.cyan },
+    CmpItemAbbrMatch = { fg = p.match },
 
     -----------------------------
     --- Spell

@@ -12,6 +12,7 @@ M.p = vim.tbl_deep_extend("force", base, {
 
   selection = "#602c3d",
   dir = "#a1cd32",
+  match = "#fac25a",
 
   command = "#FF6B9D",
   normal = "#5abffa",

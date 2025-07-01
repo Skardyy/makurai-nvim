@@ -7,7 +7,7 @@ local M = {}
 ---@type Makurai.config
 M.opts = {
   transparent = false,
-  bordered = false
+  bordered = false,
 }
 
 ---@return Makurai.config opts
