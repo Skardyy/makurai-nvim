@@ -32,7 +32,7 @@ vim.cmd.colorscheme("makurai_autumn")
 ```lua
 vim.cmd.colorscheme("makurai_spring")
 ```
-![image](https://github.com/user-attachments/assets/5ec83d05-b4d3-404d-a636-309d65a9c6ae)
+![image](https://github.com/user-attachments/assets/ab941573-f2a3-48ef-8e57-8c4f5c03cbcf)
 </details>
 
 <details>
