@@ -10,7 +10,7 @@ M.p = vim.tbl_deep_extend("force", base, {
   purple    = "#D8A5FF",
   blue      = "#66E6FF",
 
-  selection = "#2e3940",
+  selection = "#35424a",
   dir       = "#D4FF59",
   cyan      = "#66E6FF",
 
