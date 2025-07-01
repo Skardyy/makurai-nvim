@@ -118,7 +118,7 @@ function M.load(p)
     Ignore = { bg = p.orange, fg = p.on_fg },
     Error = { bg = p.error, fg = p.on_fg },
     Todo = { bg = p.yellow, fg = p.on_fg },
-    Directory = { fg = p.cyan },
+    Directory = { fg = p.dir },
 
     ------------------------------
     --- LSP Highlights
@@ -174,7 +174,7 @@ function M.load(p)
     ["@markup.link.url"] = { fg = p.cyan },
     ["@markup.quote.markdown"] = { link = "Function" },
     ["@markup.raw"] = { link = "String" },
-    ["@punctuation.special.markdown"] = { link = "Function" },
+    ["@punctuation.special.markdown"] = { fg = p.border },
     ["@markup.list.markdown"] = { link = "Function" },
 
     -----------------------------------

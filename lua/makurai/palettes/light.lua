@@ -29,6 +29,7 @@ M.p = vim.tbl_deep_extend("force", base, {
   light_orange = "#f7d1c1",
   cyan         = "#22a3f0",
   cursor       = "#f0f0fa",
+  dir          = "#22a3f0",
 
   command      = "#E35043",
   normal       = "#AB31A9",

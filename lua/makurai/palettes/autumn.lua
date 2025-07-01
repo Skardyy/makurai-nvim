@@ -10,6 +10,9 @@ M.p = vim.tbl_deep_extend("force", base, {
   purple = "#FF6B9D",
   blue = "#fc4c4c",
 
+  selection = "#602c3d",
+  dir = "#a1cd32",
+
   command = "#FF6B9D",
   normal = "#5abffa",
   insert = "#a1cd32",

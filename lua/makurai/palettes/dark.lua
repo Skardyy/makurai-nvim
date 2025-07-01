@@ -31,6 +31,7 @@
 ---@field dark_cyan string
 ---@field warning string
 ---@field LineNr string
+---@field dir string
 
 ---@class Makurai.theme
 ---@field get fun(): Makurai.Palette
@@ -62,6 +63,7 @@ M.p = {
   orange = "#FF7733",
   light_orange = "#211817",
   cyan = "#66BFFF",
+  dir = "#66BFFF",
 
   cursor = "#1e1f24",
   command = "#D2A6FF",
