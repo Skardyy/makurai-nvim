@@ -80,7 +80,7 @@ the options are everything in the palette [here](./lua/makurai/palettes/dark.lua
 </details>
 
 ## 🤔 Theme Philosophy
-The core philosophy behind this theme is minimal highlighting with maximum clarity. Instead of overwhelming the code with color, it uses **five distinct colors** to emphasize the most critical syntax elements, grouped by role:  
+The core philosophy behind this theme is minimal highlighting with maximum clarity. Instead of overwhelming the code with color, it uses **up to five distinct colors** to emphasize the most critical syntax elements, grouped by role:  
 
 1. Orange – Keywords
 2. Yellow – Functions, methods, functions constructors..
