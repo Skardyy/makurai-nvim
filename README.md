@@ -23,7 +23,7 @@ vim.cmd.colorscheme("makurai_dark")
 ```lua
 vim.cmd.colorscheme("makurai_autumn")
 ```
-![250629_02h44m09s_screenshot](https://github.com/user-attachments/assets/21378f50-990c-43d2-bdcf-ef47fd0d2a34)
+![image](https://github.com/user-attachments/assets/ebeae79a-0fb4-4648-afd6-e398788a675f)
 </details>
 
 <details>
