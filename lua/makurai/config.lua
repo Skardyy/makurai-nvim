@@ -3,11 +3,13 @@ local M = {}
 ---@class Makurai.config
 ---@field transparent boolean
 ---@field bordered boolean
+---@field increase_contrast boolean
 
 ---@type Makurai.config
 M.opts = {
   transparent = false,
   bordered = false,
+  increase_contrast = false,
 }
 
 ---@return Makurai.config opts

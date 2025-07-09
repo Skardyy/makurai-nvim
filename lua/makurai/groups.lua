@@ -28,9 +28,9 @@ function M.load(p)
     ------------------------------
     --- Cursor and Line Highlights
     ------------------------------
-    CursorLineNr = { fg = p.line },
+    CursorLineNr = { fg = opts.increase_contrast and p.orange or p.line },
     CursorLine = { bg = p.cursor },
-    LineNr = { fg = p.LineNr },
+    LineNr = { fg = opts.increase_contrast and p.line or p.LineNr },
 
     ------------------------------
     --- Status and Tabline Highlights

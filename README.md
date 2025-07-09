@@ -53,8 +53,9 @@ return {
   config = function()
     -- you don't have to call setup
     require "makurai".setup({
-      transparent = false -- removes the bg color
-      bordered = false -- removes the bg color from floats/popups
+      transparent = false, -- removes the bg color
+      bordered = false, -- removes the bg color from floats/popups
+      increase_contrast = false, -- only changes the line number and active line number for now.
     })
 
     vim.cmd.colorscheme("makurai_dark")
