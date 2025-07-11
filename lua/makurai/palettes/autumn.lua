@@ -4,20 +4,20 @@ local M = {}
 ---@type Makurai.Palette
 M.p = vim.tbl_deep_extend("force", base, {
   name      = "makurai_autumn",
-  orange    = "#fc6501",
-  yellow    = "#fac25a",
-  green     = "#a1cd32",
-  purple    = "#FF6B9D",
-  blue      = "#4FC8C8",
+  orange    = "#ff6340",
+  yellow    = "#facc75",
+  green     = "#a2d93d",
+  purple    = "#e67399",
+  blue      = "#60bfbf",
 
   selection = "#602c3d",
-  dir       = "#fac25a",
-  match     = "#fac25a",
+  dir       = "#ff6340",
+  match     = "#facc75",
 
-  command   = "#FF6B9D",
-  normal    = "#4FC8C8",
-  insert    = "#a1cd32",
-  visual    = "#fac25a",
+  command   = "#e67399",
+  normal    = "#60bfbf",
+  insert    = "#a2d93d",
+  visual    = "#facc75",
 })
 
 
