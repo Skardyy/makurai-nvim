@@ -23,16 +23,7 @@ vim.cmd.colorscheme("makurai_dark")
 ```lua
 vim.cmd.colorscheme("makurai_autumn")
 ```
-![image](https://github.com/user-attachments/assets/ebeae79a-0fb4-4648-afd6-e398788a675f)
-</details>
-
-<details>
-<summary>Spring</summary>
-
-```lua
-vim.cmd.colorscheme("makurai_spring")
-```
-![image](https://github.com/user-attachments/assets/ab941573-f2a3-48ef-8e57-8c4f5c03cbcf)
+![image](https://github.com/user-attachments/assets/1e893af5-0027-44b4-80a8-33e9cf2fe72a)
 </details>
 
 <details>
