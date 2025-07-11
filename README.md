@@ -56,14 +56,14 @@ return {
 <details>
 <summary>⚙️ Overriding the palette </summary>
 
-> the below example "converts" makurai_dark into makurai_spring
+> the below example "converts" makurai_dark into makurai_autumn
 ```lua
 require("makurai").modify("dark", {
-  orange  = "#FFB347",
-  yellow  = "#D4FF59",
-  green   = "#8CEB3A",
-  purple  = "#D8A5FF",
-  blue    = "#66E6FF",
+  orange    = "#ff6340",
+  yellow    = "#facc75",
+  green     = "#a2d93d",
+  purple    = "#e67399",
+  blue      = "#60bfbf",
 })
 
 ```
