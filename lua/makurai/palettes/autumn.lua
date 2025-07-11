@@ -11,7 +11,7 @@ M.p = vim.tbl_deep_extend("force", base, {
   blue      = "#60bfbf",
 
   selection = "#602c3d",
-  dir       = "#ff6340",
+  dir       = "#facc75",
   match     = "#facc75",
 
   command   = "#e67399",
