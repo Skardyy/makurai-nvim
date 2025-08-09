@@ -54,7 +54,7 @@ function M.load(p)
     ------------------------------
     DiffAdd = { bg = p.dark_green },
     DiffChange = { bg = p.dark_yellow },
-    DiffDelete = { bg = p.dark_red, fg = p.dark_red },
+    DiffDelete = { bg = p.dark_red },
     DiffText = { link = "Identifier" },
 
     ------------------------------
