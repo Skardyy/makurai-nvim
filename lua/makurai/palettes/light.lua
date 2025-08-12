@@ -1,8 +1,7 @@
-local base = require "makurai.palettes.dark".copy_light
 local M = {}
 
 ---@type Makurai.Palette
-M.p = vim.tbl_deep_extend("force", base, {
+M.p = {
   name         = "makurai_light",
   mode         = "light",
 
@@ -28,6 +27,7 @@ M.p = vim.tbl_deep_extend("force", base, {
 
   light_orange = "#f7d1c1",
   cyan         = "#22a3f0",
+  match        = "#22a3f0",
   cursor       = "#f0f0fa",
   dir          = "#22a3f0",
 
@@ -41,7 +41,7 @@ M.p = vim.tbl_deep_extend("force", base, {
   dark_yellow  = "#FFF7E0",
   dark_cyan    = "#E7F3FA",
   warning      = "#D68D00"
-})
+}
 
 
 ---@return Makurai.Palette

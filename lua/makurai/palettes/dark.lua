@@ -76,11 +76,10 @@ M.p = {
   dark_green = "#0F2614",
   dark_red = "#330A0A",
   dark_yellow = "#2B1A00",
-  dark_cyan = "#0D1A26",
+  dark_cyan = "#183947",
   warning = "#FFB84D",
 }
 
-M.copy_light = vim.deepcopy(M.p)
 M.copy_autumn = vim.deepcopy(M.p)
 M.copy_spring = vim.deepcopy(M.p)
 
