@@ -36,7 +36,7 @@ vim.cmd.colorscheme("makurai_light")
 </details>
 
 
-## 🚀 Installation   
+## Installation   
 lazy:  
 ```lua
 return {
@@ -54,7 +54,7 @@ return {
 }
 ```
 <details>
-<summary>⚙️ Overriding the palette </summary>
+<summary>Overriding the palette </summary>
 
 > the below example "converts" makurai_dark into makurai_autumn
 ```lua
@@ -71,7 +71,7 @@ the options are everything in the palette [here](./lua/makurai/palettes/dark.lua
 
 </details>
 
-## 🤔 Theme Philosophy
+## Theme Philosophy
 The core philosophy behind this theme is minimal highlighting with maximum clarity. Instead of overwhelming the code with color, it uses **up to five distinct colors** to emphasize the most critical syntax elements, grouped by role:  
 
 1. Orange – Keywords
