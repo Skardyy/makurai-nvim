@@ -3,6 +3,25 @@ local M = {}
 ---@param p Makurai.Palette
 function M.load(p)
   local opts = require "makurai.config".get()
+
+  -- terminal colors
+  vim.g.terminal_color_0 = p.surface
+  vim.g.terminal_color_1 = p.error
+  vim.g.terminal_color_2 = p.green
+  vim.g.terminal_color_3 = p.yellow
+  vim.g.terminal_color_4 = p.blue
+  vim.g.terminal_color_5 = p.purple
+  vim.g.terminal_color_6 = p.cyan
+  vim.g.terminal_color_7 = p.fg
+  vim.g.terminal_color_8 = p.comment
+  vim.g.terminal_color_9 = p.error
+  vim.g.terminal_color_10 = p.green
+  vim.g.terminal_color_11 = p.yellow
+  vim.g.terminal_color_12 = p.blue
+  vim.g.terminal_color_13 = p.purple
+  vim.g.terminal_color_14 = p.cyan
+  vim.g.terminal_color_15 = p.fg
+
   return {
     ------------------------------
     --- Main Syntax Highlights
