@@ -378,6 +378,11 @@ function M.load(p)
     SpellCap = { sp = p.visual, undercurl = true },
     SpellLocal = { sp = p.blue, undercurl = true },
     SpellRare = { sp = p.blue, undercurl = true },
+
+    -----------------------------
+    --- C
+    -----------------------------
+    cCharacter = { link = "String" }
   }
 end
 
