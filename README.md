@@ -14,7 +14,7 @@
 ```lua
 vim.cmd.colorscheme("makurai_dark")
 ```
-![image](https://github.com/user-attachments/assets/126a33a0-e2a1-4403-8cf4-239959c01d8f)
+![image](https://github.com/user-attachments/assets/5e5c63aa-9d90-4c06-a90d-bd615f26a77b)
 </details>
 
 <details>
@@ -23,7 +23,8 @@ vim.cmd.colorscheme("makurai_dark")
 ```lua
 vim.cmd.colorscheme("makurai_autumn")
 ```
-![image](https://github.com/user-attachments/assets/fe5989e8-2dfa-419c-9394-24b3a2e81ee2)
+![image](https://github.com/user-attachments/assets/2b18105f-b399-462c-83fe-723fc4d64e80)
+
 </details>
 
 <details>
@@ -32,7 +33,7 @@ vim.cmd.colorscheme("makurai_autumn")
 ```lua
 vim.cmd.colorscheme("makurai_light")
 ``` 
-![image](https://github.com/user-attachments/assets/382137a1-cdc5-4617-9467-3aad60cb608f)
+![image](https://github.com/user-attachments/assets/d2f8bccd-8de1-449f-aba5-773951bf3809)
 </details>
 
 
@@ -45,8 +46,6 @@ return {
     -- you don't have to call setup
     require "makurai".setup({
       transparent = false, -- removes the bg color
-      bordered = false, -- removes the bg color from floats/popups
-      increase_contrast = false, -- only changes the line number and active line number for now.
     })
 
     vim.cmd.colorscheme("makurai_dark")
@@ -59,15 +58,17 @@ return {
 > the below example "converts" makurai_dark into makurai_autumn
 ```lua
 require("makurai").modify("dark", {
-  orange    = "#ff6340",
-  yellow    = "#facc75",
-  green     = "#a2d93d",
-  purple    = "#e67399",
-  blue      = "#60bfbf",
+  syntax = {
+    keyword = "#ff6340",
+    fn      = "#facc75",
+    str     = "#a2d93d",
+    const   = "#e67399",
+    type    = "#60bfbf",
+  },
 })
 
 ```
-the options are everything in the palette [here](./lua/makurai/palettes/dark.lua#L1)
+the options are everything in the palette [here](./lua/makurai/palettes/dark.lua)
 
 </details>
 
