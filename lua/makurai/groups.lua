@@ -2,101 +2,106 @@ local M = {}
 
 ---@param p Makurai.Palette
 function M.load(p)
-  local opts = require "makurai.config".get()
+  local opts = require("makurai.config").get()
 
   -- terminal colors
-  vim.g.terminal_color_0 = p.surface
-  vim.g.terminal_color_1 = p.error
-  vim.g.terminal_color_2 = p.green
-  vim.g.terminal_color_3 = p.yellow
-  vim.g.terminal_color_4 = p.blue
-  vim.g.terminal_color_5 = p.purple
-  vim.g.terminal_color_6 = p.cyan
-  vim.g.terminal_color_7 = p.fg
-  vim.g.terminal_color_8 = p.comment
-  vim.g.terminal_color_9 = p.error
-  vim.g.terminal_color_10 = p.green
-  vim.g.terminal_color_11 = p.yellow
-  vim.g.terminal_color_12 = p.blue
-  vim.g.terminal_color_13 = p.purple
-  vim.g.terminal_color_14 = p.cyan
-  vim.g.terminal_color_15 = p.fg
+  vim.g.terminal_color_0 = p.term.black
+  vim.g.terminal_color_1 = p.term.red
+  vim.g.terminal_color_2 = p.term.green
+  vim.g.terminal_color_3 = p.term.yellow
+  vim.g.terminal_color_4 = p.term.blue
+  vim.g.terminal_color_5 = p.term.magenta
+  vim.g.terminal_color_6 = p.term.cyan
+  vim.g.terminal_color_7 = p.term.white
+  vim.g.terminal_color_8 = p.term.bright_black
+  vim.g.terminal_color_9 = p.term.red
+  vim.g.terminal_color_10 = p.term.green
+  vim.g.terminal_color_11 = p.term.yellow
+  vim.g.terminal_color_12 = p.term.blue
+  vim.g.terminal_color_13 = p.term.magenta
+  vim.g.terminal_color_14 = p.term.cyan
+  vim.g.terminal_color_15 = p.term.white
 
   return {
     ------------------------------
     --- Main Syntax Highlights
     ------------------------------
-    Comment = { fg = p.comment },
-    Constant = { fg = p.purple },
-    String = { fg = p.green },
-    Identifier = { fg = p.fg },
-    Function = { fg = p.yellow },
-    Keyword = { fg = p.orange },
-    Type = { fg = p.blue },
+    Comment = { fg = p.syntax.comment },
+    Constant = { fg = p.syntax.const },
+    String = { fg = p.syntax.str },
+    Identifier = { fg = p.editor.fg },
+    Function = { fg = p.syntax.fn },
+    Keyword = { fg = p.syntax.keyword },
+    Type = { fg = p.syntax.type },
 
     ------------------------------
     --- Normal Highlights
     ------------------------------
-    Normal = { bg = opts.transparent and "none" or p.bg, fg = p.fg },
-    NormalFloat = { bg = opts.bordered and "none" or p.bg_alt },
-    FloatBorder = { fg = p.border, bg = opts.bordered and "none" or p.bg_alt },
-    Pmenu = { bg = opts.bordered and "none" or p.surface_alt },
-    PmenuSel = { bg = p.selection },
-    PmenuBorder = { fg = p.border, bg = opts.bordered and "none" or p.surface_alt },
+    Normal = { bg = opts.transparent and "none" or p.editor.bg, fg = p.editor.fg },
+    NormalFloat = { bg = "none" },
+    FloatBorder = { fg = p.editor.border, bg = "none" },
+    Pmenu = { bg = p.editor.surface },
+    PmenuSel = { bg = p.editor.selection },
+    PmenuSbar = { bg = p.editor.surface },
+    PmenuThumb = { bg = p.editor.border },
+    PmenuBorder = { fg = p.editor.border, bg = "none" },
 
     ------------------------------
     --- Cursor and Line Highlights
     ------------------------------
-    CursorLineNr = { fg = opts.increase_contrast and p.orange or p.line },
-    CursorLine = { bg = p.cursor },
-    LineNr = { fg = opts.increase_contrast and p.line or p.LineNr },
+    CursorLineNr = { fg = p.editor.line_nr_active },
+    CursorLine = { bg = p.editor.cursor_line },
+    LineNr = { fg = p.editor.line_nr },
 
     ------------------------------
     --- Status and Tabline Highlights
     ------------------------------
-    StatusLine = { bg = p.surface, fg = p.fg },
-    StatusLineNC = { bg = p.surface, fg = p.comment },
-    TabLine = { bg = p.surface, fg = p.comment },
-    TabLineFill = {},
-    TabLineSel = { bg = p.bg_alt, fg = p.fg },
+    StatusLine = { bg = p.editor.statusline, fg = p.editor.fg },
+    StatusLineNC = { bg = p.editor.statusline, fg = p.editor.fg },
+    TabLine = { bg = "none", fg = p.syntax.comment },
+    TabLineFill = { bg = "none" },
+    TabLineSel = { bg = p.editor.surface, fg = p.editor.fg },
 
     ------------------------------
-    --- Seleciton
+    --- Selection
     ------------------------------
-    Search = { bg = p.selection },
-    CurSearch = { bg = p.selection },
-    MatchParen = { bg = p.selection },
-    Visual = { bg = p.selection },
+    Search = { bg = p.editor.match },
+    CurSearch = { bg = p.editor.match },
+    MatchParen = { bg = p.editor.match, bold = true },
+    Visual = { bg = p.editor.selection },
 
     ------------------------------
     --- Diff and Change Highlights
     ------------------------------
-    DiffAdd = { bg = p.dark_green },
-    DiffChange = { bg = p.dark_yellow },
-    DiffDelete = { bg = p.dark_red, fg = p.dark_red },
-    DiffText = { bg = p.dark_cyan },
+    DiffAdd = { bg = p.git.bg_add },
+    DiffChange = { bg = p.git.bg_change },
+    DiffDelete = { bg = p.git.bg_delete, fg = p.git.bg_delete },
+    DiffText = { bg = p.git.bg_text },
 
     ------------------------------
     --- Message and Warning Highlights
     ------------------------------
-    ErrorMsg = { fg = p.error },
-    ModeMsg = { fg = p.insert },
-    MsgArea = { link = "Function" },
-    MsgSeparator = { fg = p.border },
-    Question = { link = "Function" },
-    QuickFixLine = { link = "Function" },
-    WarningMsg = { fg = p.warning },
+    ErrorMsg = { fg = p.diagnostic.error },
+    WarningMsg = { fg = p.diagnostic.warning },
+    ModeMsg = { fg = p.diagnostic.ok },
+    MsgArea = { link = "Identifier" },
+    MsgSeparator = { fg = p.editor.border },
+    Question = { fg = p.diagnostic.info },
+    QuickFixLine = { bg = p.editor.cursor_line },
 
     ------------------------------
     --- Window and Separator Highlights
     ------------------------------
-    VertSplit = { fg = p.border, bg = p.border },
-    SignColumn = {},
-    Winseparator = { fg = p.border },
-    Whitespace = { fg = p.guide },
-    NonText = { fg = p.guide },
-    IblScope = { fg = p.guide },
-    ["@ibl.scope.char.1"] = { fg = p.guide },
+    VertSplit = { fg = p.editor.divider },
+    WinSeparator = { fg = p.editor.divider },
+    SignColumn = { bg = "none" },
+    Whitespace = { fg = p.editor.guide },
+    NonText = { fg = p.editor.guide },
+    Title = { bg = p.term.yellow, fg = p.editor.fg_inverted,  bold = true },
+
+    -- Indent Blankline
+    IblScope = { fg = p.editor.divider },
+    ["@ibl.scope.char.1"] = { fg = p.editor.divider },
 
     ------------------------------
     --- Syntax Highlights
@@ -106,14 +111,15 @@ function M.load(p)
     Boolean = { link = "Constant" },
     Float = { link = "Constant" },
 
+    Operator = { link = "Identifier" },
+
+    PreProc = { link = "Function" },
+
     Statement = { link = "Keyword" },
     Conditional = { link = "Keyword" },
     Repeat = { link = "Keyword" },
     Label = { link = "Keyword" },
-    Operator = { link = "Identifier" },
     Exception = { link = "Keyword" },
-
-    PreProc = { link = "Function" },
     Include = { link = "Keyword" },
     Define = { link = "Keyword" },
     Macro = { link = "Keyword" },
@@ -122,27 +128,22 @@ function M.load(p)
     StorageClass = { link = "Type" },
     Structure = { link = "Type" },
     Typedef = { link = "Type" },
-
     Special = { link = "Type" },
-    -- SpecialChar    { }, --   Special character in a constant
-    -- Tag            { }, --   You can use CTRL-] on this
-    -- Delimiter      { }, --   Character that needs attention
-    -- SpecialComment { }, --   Special things inside a comment (e.g. '\n')
-    -- Debug          { }, --   Debugging statements
 
     ------------------------------
     --- Formatted specials
     ------------------------------
-    Underlined = { fg = p.cyan, underline = true },
-    Ignore = { bg = p.orange, fg = p.on_fg },
-    Error = { bg = p.error, fg = p.on_fg },
-    Todo = { bg = p.yellow, fg = p.on_fg },
-    Directory = { fg = p.dir },
+    Underlined = { fg = p.syntax.type, underline = true },
+    Ignore = { fg = p.syntax.comment },
+    Error = { fg = p.diagnostic.error, bold = true },
+    Todo = { fg = p.syntax.keyword, bold = true },
+    Directory = { fg = p.term.cyan },
 
     ------------------------------
     --- LSP Highlights
     ------------------------------
     LspReferenceText = { link = "Identifier" },
+
     ["@lsp.type.namespace"] = { link = "Identifier" },
     ["@lsp.typemod.variable.callable"] = { link = "Function" },
     ["@lsp.mod.callable"] = { link = "Function" },
@@ -150,39 +151,41 @@ function M.load(p)
     ----------------------
     -- Diagnostic
     ----------------------
-    DiagnosticError = { fg = p.error },
-    DiagnosticWarn = { fg = p.warning },
-    DiagnosticInfo = { fg = p.cyan },
-    DiagnosticHint = { fg = p.cyan },
-    DiagnosticOk = { fg = p.insert },
-    -- DiagnosticUnderLineError = { sp = p.error, undercurl = true },
-    -- DiagnosticVirtualTextError { } , -- Used for "Error" diagnostic virtual text.
-    -- DiagnosticVirtualTextWarn  { } , -- Used for "Warn" diagnostic virtual text.
-    -- DiagnosticVirtualTextInfo  { } , -- Used for "Info" diagnostic virtual text.
-    -- DiagnosticVirtualTextHint  { } , -- Used for "Hint" diagnostic virtual text.
-    -- DiagnosticVirtualTextOk    { } , -- Used for "Ok" diagnostic virtual text.
-    -- DiagnosticUnderlineError   { } , -- Used to underline "Error" diagnostics.
-    -- DiagnosticUnderlineWarn    { } , -- Used to underline "Warn" diagnostics.
-    -- DiagnosticUnderlineInfo    { } , -- Used to underline "Info" diagnostics.
-    -- DiagnosticUnderlineHint    { } , -- Used to underline "Hint" diagnostics.
-    -- DiagnosticUnderlineOk      { } , -- Used to underline "Ok" diagnostics.
-    -- DiagnosticFloatingError    { } , -- Used to color "Error" diagnostic messages in diagnostics float. See |vim.diagnostic.open_float()|
-    -- DiagnosticFloatingWarn     { } , -- Used to color "Warn" diagnostic messages in diagnostics float.
-    -- DiagnosticFloatingInfo     { } , -- Used to color "Info" diagnostic messages in diagnostics float.
-    -- DiagnosticFloatingHint     { } , -- Used to color "Hint" diagnostic messages in diagnostics float.
-    -- DiagnosticFloatingOk       { } , -- Used to color "Ok" diagnostic messages in diagnostics float.
-    -- DiagnosticSignError        { } , -- Used for "Error" signs in sign column.
-    -- DiagnosticSignWarn         { } , -- Used for "Warn" signs in sign column.
-    -- DiagnosticSignInfo         { } , -- Used for "Info" signs in sign column.
-    -- DiagnosticSignHint         { } , -- Used for "Hint" signs in sign column.
-    -- DiagnosticSignOk           { } , -- Used for "Ok" signs in sign column.
+    DiagnosticError = { fg = p.diagnostic.error },
+    DiagnosticWarn = { fg = p.diagnostic.warning },
+    DiagnosticInfo = { fg = p.diagnostic.info },
+    DiagnosticHint = { fg = p.diagnostic.hint },
+    DiagnosticOk = { fg = p.diagnostic.ok },
+    DiagnosticUnderlineError = { sp = p.diagnostic.error },
+    DiagnosticUnderlineWarn = { sp = p.diagnostic.warning },
+    DiagnosticUnderlineInfo = { sp = p.diagnostic.info },
+    DiagnosticUnderlineHint = { sp = p.diagnostic.hint },
+    DiagnosticUnderlineOk = { sp = p.diagnostic.ok },
+    DiagnosticVirtualTextError = { fg = p.diagnostic.error },
+    DiagnosticVirtualTextWarn = { fg = p.diagnostic.warning },
+    DiagnosticVirtualTextInfo = { fg = p.diagnostic.info },
+    DiagnosticVirtualTextHint = { fg = p.diagnostic.hint },
+    DiagnosticVirtualTextOk = { fg = p.diagnostic.ok },
+    DiagnosticFloatingError = { fg = p.diagnostic.error },
+    DiagnosticFloatingWarn = { fg = p.diagnostic.warning },
+    DiagnosticFloatingInfo = { fg = p.diagnostic.info },
+    DiagnosticFloatingHint = { fg = p.diagnostic.hint },
+    DiagnosticFloatingOk = { fg = p.diagnostic.ok },
+    DiagnosticSignError = { fg = p.diagnostic.error },
+    DiagnosticSignWarn = { fg = p.diagnostic.warning },
+    DiagnosticSignInfo = { fg = p.diagnostic.info },
+    DiagnosticSignHint = { fg = p.diagnostic.hint },
+    DiagnosticSignOk = { fg = p.diagnostic.ok },
 
     -----------------------------------
     -- HTML syntax groups.
     -----------------------------------
-    cssBraces = { link = "Identifier" },
     htmlTag = { link = "Identifier" },
-    htmlHead = { link = "Identifier" },
+
+    -----------------------------------
+    -- CSS syntax groups.
+    -----------------------------------
+    cssBraces = { link = "Identifier" },
 
     -----------------------------------
     -- Markdown syntax groups.
@@ -190,11 +193,13 @@ function M.load(p)
     ["@markup.heading"] = { link = "Keyword" },
     ["@markup.link"] = { link = "Type" },
     ["@markup.link.label"] = { link = "Type" },
-    ["@markup.link.url"] = { fg = p.cyan },
-    ["@markup.quote.markdown"] = { link = "Function" },
+    ["@markup.link.url"] = { fg = p.syntax.type, underline = true },
+    ["@markup.quote"] = { link = "Comment" },
     ["@markup.raw"] = { link = "String" },
-    ["@punctuation.special.markdown"] = { fg = p.border },
-    ["@markup.list.markdown"] = { link = "Function" },
+    ["@markup.list"] = { link = "Function" },
+    ["@markup.list.checked"] = { fg = p.diagnostic.ok },
+    ["@markup.list.unchecked"] = { fg = p.diagnostic.error },
+    ["@punctuation.special.markdown"] = { fg = p.syntax.comment },
 
     -----------------------------------
     -- Tree-Sitter syntax groups.
@@ -237,9 +242,9 @@ function M.load(p)
     ["@structure"] = { link = "Type" },
     ["@module"] = { link = "Type" },
     ["@namespace"] = { link = "Identifier" },
-    ["@include"] = { link = "Identifier" },
-    ["@preproc"] = { link = "Identifier" },
-    ["@debug"] = { link = "Identifier" },
+    ["@include"] = { link = "Keyword" },
+    ["@preproc"] = { link = "Keyword" },
+    ["@debug"] = { link = "Keyword" },
     ["@tag"] = { link = "Type" },
     ["@tag.attribute"] = { link = "Function" },
     ["@tag.delimiter"] = { link = "Comment" },
@@ -247,73 +252,82 @@ function M.load(p)
     -----------------------------
     --- Git Signs
     -----------------------------
-    GitSignsAdd = { fg = p.insert },
-    GitSignsChange = { fg = p.visual },
-    GitSignsDelete = { fg = p.error },
+    GitSignsAdd = { fg = p.git.add },
+    GitSignsChange = { fg = p.git.change },
+    GitSignsDelete = { fg = p.git.delete },
+    GitSignsAddNr = { fg = p.git.add },
+    GitSignsChangeNr = { fg = p.git.change },
+    GitSignsDeleteNr = { fg = p.git.delete },
+    GitSignsAddLn = { bg = p.git.bg_add },
+    GitSignsChangeLn = { bg = p.git.bg_change },
+    GitSignsDeleteLn = { bg = p.git.bg_delete },
+    GitSignsCurrentLineBlame = { fg = p.syntax.comment },
 
     -----------------------------
     --- Telescope
     -----------------------------
-    TelescopeBorder = { fg = p.border },
+    TelescopeBorder = { fg = p.editor.border },
+    TelescopePromptTitle = { bg = p.syntax.keyword, bold = true, fg = p.editor.fg_inverted },
+    TelescopePreviewTitle = { bg = p.term.yellow, bold = true, fg = p.editor.fg_inverted },
+    TelescopeResultsTitle = { bg = p.term.green, bold = true, fg = p.editor.fg_inverted },
 
     -----------------------------
     --- WhichKey
     -----------------------------
-    WhichKeyNormal = { bg = p.surface_alt },
+    WhichKeyNormal = { bg = p.editor.surface },
     WhichKeyValue = { link = "Identifier" },
-    WhichKeySeparator = { link = "Identifier" },
+    WhichKeySeparator = { link = "Comment" },
 
     -----------------------------
     --- ToggleTerm
     -----------------------------
-    ToggleTerm = { link = "Pmenu" },
-    ToggleTermBorder = { link = "PmenuBorder" },
+    ToggleTerm = { link = "Normal" },
+    ToggleTermBorder = { link = "FloatBorder" },
 
     -----------------------------
     --- Lazy
     -----------------------------
-    LazyNormal = { bg = p.surface_alt },
-    LazyButton = { link = "Identifier" },
-    LazyButtonActive = { fg = p.fg, bg = p.selection, bold = true },
-    LazyH1 = { fg = p.orange, bold = true },
-    LazyH2 = { fg = p.yellow, bold = true },
+    LazyNormal = { bg = p.editor.surface },
+    LazyButton = { fg = p.syntax.comment },
+    LazyButtonActive = { fg = p.editor.fg, bg = p.editor.selection, bold = true },
+    LazyH1 = { fg = p.syntax.keyword, bold = true },
+    LazyH2 = { fg = p.syntax.fn, bold = true },
     LazySpecial = { link = "Type" },
-    LazyProgressTodo = { fg = p.border },
-    LazyProgressDone = { link = "String" },
+    LazyProgressTodo = { fg = p.editor.border },
+    LazyProgressDone = { fg = p.diagnostic.ok },
     LazyProp = { link = "Constant" },
     LazyValue = { link = "String" },
-    LazyReasonPlugin = { fg = p.yellow },
+    LazyReasonPlugin = { fg = p.syntax.fn },
     LazyReasonRuntime = { link = "Keyword" },
-    LazyReasonEvent = { fg = p.cyan },
+    LazyReasonEvent = { fg = p.diagnostic.info },
     LazyCommit = { link = "Constant" },
-    LazyComment = { fg = p.border },
+    LazyComment = { fg = p.syntax.comment },
 
     -----------------------------
     --- render-markdown.nvim
     -----------------------------
-    RenderMarkdownH1Bg = { bg = p.light_orange },
+    RenderMarkdownH1Bg = { bg = p.editor.surface },
     RenderMarkdownH2Bg = { link = "RenderMarkdownH1Bg" },
     RenderMarkdownH3Bg = { link = "RenderMarkdownH1Bg" },
     RenderMarkdownH4Bg = { link = "RenderMarkdownH1Bg" },
     RenderMarkdownH5Bg = { link = "RenderMarkdownH1Bg" },
     RenderMarkdownH6Bg = { link = "RenderMarkdownH1Bg" },
-    RenderMarkdownCode = { bg = p.surface_alt },
+    RenderMarkdownCode = { bg = p.editor.surface },
     RenderMarkdownBullet = { link = "Function" },
     RenderMarkdownQuote = { link = "Function" },
-    RenderMarkdownTableRow = { link = "Function" },
-
+    RenderMarkdownTableRow = { link = "Identifier" },
 
     -----------------------------
-    --- yaml
+    --- YAML
     -----------------------------
     ["@property.yaml"] = { link = "Keyword" },
 
     -----------------------------
-    --- blink
+    --- Blink
     -----------------------------
     BlinkCmpLabel = { link = "Identifier" },
-    BlinkCmpLabelDeprecated = { link = "Identifier" },
-    BlinkCmpLabelMatch = { fg = p.cyan },
+    BlinkCmpLabelDeprecated = { fg = p.syntax.comment, strikethrough = true },
+    BlinkCmpLabelMatch = { fg = p.syntax.type, bold = true },
     BlinkCmpKind = { link = "Identifier" },
     BlinkCmpKindFunction = { link = "Function" },
     BlinkCmpKindConstructor = { link = "Type" },
@@ -323,26 +337,31 @@ function M.load(p)
     BlinkCmpKindModule = { link = "Type" },
     BlinkCmpKindProperty = { link = "Constant" },
     BlinkCmpKindOperator = { link = "Keyword" },
-    BlinkCmpKindReference = { fg = p.cyan },
+    BlinkCmpKindReference = { fg = p.diagnostic.info },
     BlinkCmpKindUnit = { link = "Constant" },
     BlinkCmpKindValue = { link = "Constant" },
     BlinkCmpKindField = { link = "Constant" },
     BlinkCmpKindEnum = { link = "Type" },
     BlinkCmpKindKeyword = { link = "Keyword" },
-    BlinkCmpKindSnippet = { fg = p.cyan },
-    BlinkCmpKindColor = { fg = p.cyan },
-    BlinkCmpKindFile = { fg = p.purple },
-    BlinkCmpKindFolder = { fg = p.cyan },
+    BlinkCmpKindSnippet = { fg = p.diagnostic.hint },
+    BlinkCmpKindColor = { fg = p.diagnostic.info },
+    BlinkCmpKindFile = { fg = p.syntax.const },
+    BlinkCmpKindFolder = { fg = p.diagnostic.info },
     BlinkCmpKindEvent = { link = "Keyword" },
     BlinkCmpKindEnumMember = { link = "Constant" },
     BlinkCmpKindConstant = { link = "Constant" },
     BlinkCmpKindStruct = { link = "Type" },
     BlinkCmpKindTypeParameter = { link = "Identifier" },
+    BlinkCmpKindText = { link = "String" },
+    BlinkCmpKindMethod = { link = "Function" },
     BlinkCmpDocBorder = { link = "FloatBorder" },
     BlinkCmpMenuBorder = { link = "PmenuBorder" },
+    BlinkCmpDoc = { link = "NormalFloat" },
+    BlinkCmpMenu = { link = "Pmenu" },
+    BlinkCmpMenuSelection = { link = "PmenuSel" },
 
     -----------------------------
-    --- cmp
+    --- Cmp
     -----------------------------
     CmpItemKindText = { link = "String" },
     CmpItemKindMethod = { link = "Function" },
@@ -358,31 +377,39 @@ function M.load(p)
     CmpItemKindValue = { link = "Constant" },
     CmpItemKindEnum = { link = "Type" },
     CmpItemKindKeyword = { link = "Keyword" },
-    CmpItemKindSnippet = { fg = p.cyan },
-    CmpItemKindColor = { fg = p.cyan },
-    CmpItemKindFile = { fg = p.purple },
-    CmpItemKindReference = { fg = p.cyan },
-    CmpItemKindFolder = { fg = p.cyan },
+    CmpItemKindSnippet = { fg = p.diagnostic.hint },
+    CmpItemKindColor = { fg = p.diagnostic.info },
+    CmpItemKindFile = { fg = p.syntax.const },
+    CmpItemKindReference = { fg = p.diagnostic.info },
+    CmpItemKindFolder = { fg = p.diagnostic.info },
     CmpItemKindEnumMember = { link = "Constant" },
     CmpItemKindConstant = { link = "Constant" },
     CmpItemKindStruct = { link = "Type" },
     CmpItemKindEvent = { link = "Keyword" },
     CmpItemKindOperator = { link = "Keyword" },
     CmpItemKindTypeParameter = { link = "Identifier" },
-    CmpItemAbbrMatch = { fg = p.match },
+    CmpItemAbbrMatch = { fg = p.syntax.type, bold = true },
+    CmpItemAbbrMatchFuzzy = { fg = p.syntax.type },
+    CmpItemAbbrDeprecated = { fg = p.syntax.comment, strikethrough = true },
+    CmpItemMenu = { fg = p.syntax.comment },
 
     -----------------------------
     --- Spell
     -----------------------------
-    SpellBad = { sp = p.error, undercurl = true },
-    SpellCap = { sp = p.visual, undercurl = true },
-    SpellLocal = { sp = p.blue, undercurl = true },
-    SpellRare = { sp = p.blue, undercurl = true },
+    SpellBad = { sp = p.diagnostic.error, undercurl = true },
+    SpellCap = { sp = p.diagnostic.warning, undercurl = true },
+    SpellLocal = { sp = p.diagnostic.warning, undercurl = true },
+    SpellRare = { sp = p.diagnostic.warning, undercurl = true },
 
     -----------------------------
     --- C
     -----------------------------
-    cCharacter = { link = "String" }
+    cCharacter = { link = "String" },
+
+    -----------------------------
+    --- Rust
+    -----------------------------
+    ["@lsp.typemod.keyword.unsafe.rust"] = { fg = p.diagnostic.error },
   }
 end
 

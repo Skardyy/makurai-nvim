@@ -15,7 +15,7 @@ end
 
 ---@param variant "dark"|"light"|"autumn"
 function M.modify(variant, pal)
-  if variant ~= "dark" and variant ~= "light" and variant ~= "autumn" and variant ~= "spring" then
+  if variant ~= "dark" and variant ~= "light" and variant ~= "autumn" then
     vim.schedule(function()
       vim.notify("modify key needs to be 'dark' | 'light' | 'autumn'", vim.log.levels.ERROR)
     end)

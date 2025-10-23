@@ -1,19 +1,19 @@
-local p = require "makurai.palettes.healer".get()
+local p = require "makurai.palettes.light".get()
 
 return {
   normal = {
-    a = { fg = p.on_fg, bg = p.normal },
-    b = { fg = p.fg, bg = p.surface_alt },
-    c = { fg = p.fg, bg = p.surface },
-    y = { fg = p.fg, bg = p.surface_alt },
+    a = { fg = p.editor.fg_inverted, bg = p.term.blue },
+    b = { fg = p.editor.fg, bg = p.editor.statusline },
+    c = { fg = p.editor.fg, bg = p.editor.statusline },
+    y = { fg = p.editor.fg, bg = p.editor.statusline },
   },
-  insert = { a = { fg = p.surface, bg = p.insert } },
-  visual = { a = { fg = p.surface, bg = p.visual } },
-  replace = { a = { fg = p.surface, bg = p.error } },
-  command = { a = { fg = p.surface, bg = p.command } },
+  insert = { a = { fg = p.editor.fg_inverted, bg = p.term.green } },
+  visual = { a = { fg = p.editor.fg_inverted, bg = p.term.yellow } },
+  replace = { a = { fg = p.editor.fg_inverted, bg = p.term.red } },
+  command = { a = { fg = p.editor.fg_inverted, bg = p.term.magenta } },
   inactive = {
-    a = { fg = p.fg, bg = p.surface },
-    b = { fg = p.fg, bg = p.surface },
-    c = { fg = p.fg, bg = p.surface },
+    a = { fg = p.editor.fg, bg = p.editor.statusline },
+    b = { fg = p.editor.fg, bg = p.editor.statusline },
+    c = { fg = p.editor.fg, bg = p.editor.statusline },
   },
 }

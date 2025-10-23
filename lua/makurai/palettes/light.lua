@@ -2,47 +2,61 @@ local M = {}
 
 ---@type Makurai.Palette
 M.p = {
-  name         = "makurai_light",
-  mode         = "light",
-
-  orange       = "#E35043",
-  yellow       = "#3D76F3",
-  green        = "#51A150",
-  blue         = "#AB31A9",
-  purple       = "#976700",
-  fg           = "#323640",
-  comment      = "#A0A1A7",
-  error        = "#CC0000",
-
-  bg           = "#f8f8fc",
-  surface      = "#ececf2",
-  bg_alt       = "#ebebf4",
-  surface_alt  = "#f0f0f9",
-  border       = "#7e8a9e",
-  on_fg        = "#FAFAFA",
-  selection    = "#C6DBFF",
-  line         = "#3D76F3",
-  LineNr       = "#A0A1A7",
-  guide        = "#D1D5DB",
-
-  light_orange = "#f7d1c1",
-  cyan         = "#22a3f0",
-  match        = "#22a3f0",
-  cursor       = "#f0f0fa",
-  dir          = "#22a3f0",
-
-  command      = "#E35043",
-  normal       = "#AB31A9",
-  insert       = "#51A150",
-  visual       = "#3D76F3",
-
-  dark_green   = "#E6F4EA",
-  dark_red     = "#FDE7E9",
-  dark_yellow  = "#FFF7E0",
-  dark_cyan    = "#E7F3FA",
-  warning      = "#D68D00"
+	name = "makurai_light",
+	mode = "light",
+	syntax = {
+		const = "#8A2BE2",
+		str = "#2E8B57",
+		fn = "#D2691E",
+		type = "#1E90FF",
+		keyword = "#DC143C",
+		comment = "#64748b",
+	},
+	diagnostic = {
+		error = "#DC143C",
+		warning = "#FF8C00",
+		info = "#1E90FF",
+		hint = "#1E90FF",
+		ok = "#2E8B57",
+	},
+	editor = {
+		bg = "#f8f8fc",
+		surface = "#ececf2",
+		statusline = "none",
+		----------------------------
+		fg = "#2D3748",
+		fg_inverted = "#FFFFFF",
+		----------------------------
+		guide = "#E2E8F0",
+		divider = "#CBD5E0",
+		border = "#A0AEC0",
+		selection = "#C6DBFF",
+		match = "#C6DBFF",
+		cursor_line = "#f0f0fa",
+		line_nr = "#718096",
+		line_nr_active = "#2D3748",
+	},
+	term = {
+		black = "#2D3748",
+		red = "#DC143C",
+		green = "#2E8B57",
+		yellow = "#D2691E",
+		blue = "#1E90FF",
+		magenta = "#8A2BE2",
+		cyan = "#00BFFF",
+		white = "#F8F9FA",
+		bright_black = "#718096",
+	},
+	git = {
+		add = "#2E8B57",
+		change = "#D2691E",
+		delete = "#DC143C",
+		bg_add = "#F0FFF4",
+		bg_delete = "#FFF5F5",
+		bg_change = "#FFFAF0",
+		bg_text = "#EBF8FF",
+	},
 }
-
 
 ---@return Makurai.Palette
 function M.get()
