@@ -97,7 +97,7 @@ function M.load(p)
     SignColumn = { bg = "none" },
     Whitespace = { fg = p.editor.guide },
     NonText = { fg = p.editor.guide },
-    Title = { bg = p.term.yellow, fg = p.editor.fg_inverted,  bold = true },
+    Title = { bg = p.term.yellow, fg = p.editor.fg_inverted, bold = true },
 
     -- Indent Blankline
     IblScope = { fg = p.editor.divider },
@@ -392,6 +392,14 @@ function M.load(p)
     CmpItemAbbrMatchFuzzy = { fg = p.syntax.type },
     CmpItemAbbrDeprecated = { fg = p.syntax.comment, strikethrough = true },
     CmpItemMenu = { fg = p.syntax.comment },
+
+    -----------------------------
+    --- nvim-bqf
+    -----------------------------
+    BqfPreviewFloat = { bg = p.editor.bg, blend = 0 },
+    BqfPreviewBorder = { fg = p.editor.border, bg = p.editor.bg, blend = 0 },
+    BqfPreviewCursorLine = { link = "CursorLine" },
+    BqfPreviewCursor = { fg = p.editor.fg_inverted, bg = p.term.yellow },
 
     -----------------------------
     --- Spell
