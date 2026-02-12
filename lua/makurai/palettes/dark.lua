@@ -84,7 +84,7 @@ M.p = {
   },
   editor = {
     bg = "#15161b",
-    surface = "#22202a",
+    surface = "#262831",
     statusline = "none",
     ----------------------------
     fg = "#ffffff",
