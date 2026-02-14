@@ -4,6 +4,8 @@ local M = {}
 function M.get(p)
   return {
     SnacksPickerDir = { fg = p.editor.fg },
+    SnacksPickerRow = { fg = p.editor.fg },
+    SnacksPickerCol = { fg = p.editor.fg },
   }
 end
 
