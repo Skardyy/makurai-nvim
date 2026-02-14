@@ -57,7 +57,8 @@ function M.load(p)
     "telescope",
     "toggleterm",
     "whichkey",
-    "snacks"
+    "snacks",
+    "oil-git-status"
   }
 
   for _, module_name in ipairs(plugin_modules) do
