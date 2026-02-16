@@ -21,6 +21,7 @@ function M.get(p, opts)
     ------------------------------
     CursorLineNr = { fg = p.editor.line_nr_active },
     CursorLine = { bg = p.editor.cursor_line },
+    Cursor = { bg = p.editor.cursor, fg = p.editor.fg_inverted },
     LineNr = { fg = p.editor.line_nr },
 
     ------------------------------

@@ -27,6 +27,7 @@
 ---@field cursor_line string
 ---@field line_nr string
 ---@field line_nr_active string
+---@field cursor string
 
 ---@class Makurai.Terminal
 ---@field black string
@@ -98,6 +99,7 @@ M.p = {
     cursor_line = "#1e1f24",
     line_nr = "#34383d",
     line_nr_active = "#525960",
+    cursor = "#ffdb29"
   },
   term = {
     black = "#15161b",
