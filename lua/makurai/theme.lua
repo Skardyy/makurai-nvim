@@ -12,7 +12,9 @@ function M.load(p)
 
   local ps = require "makurai.groups".load(p)
   for group, options in pairs(ps) do
-    vim.api.nvim_set_hl(0, group, options)
+    if options ~= nil then
+      vim.api.nvim_set_hl(0, group, options)
+    end
   end
 end
 

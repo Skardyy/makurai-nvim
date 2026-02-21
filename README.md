@@ -14,7 +14,9 @@
 ```lua
 vim.cmd.colorscheme("makurai_dark")
 ```
+
 ![image](https://github.com/user-attachments/assets/5e5c63aa-9d90-4c06-a90d-bd615f26a77b)
+
 </details>
 
 <details>
@@ -23,6 +25,7 @@ vim.cmd.colorscheme("makurai_dark")
 ```lua
 vim.cmd.colorscheme("makurai_autumn")
 ```
+
 ![image](https://github.com/user-attachments/assets/2b18105f-b399-462c-83fe-723fc4d64e80)
 
 </details>
@@ -32,13 +35,16 @@ vim.cmd.colorscheme("makurai_autumn")
 
 ```lua
 vim.cmd.colorscheme("makurai_light")
-``` 
+```
+
 ![image](https://github.com/user-attachments/assets/d2f8bccd-8de1-449f-aba5-773951bf3809)
+
 </details>
 
+## Installation
 
-## Installation   
-lazy:  
+lazy:
+
 ```lua
 return {
   "Skardyy/makurai-nvim",
@@ -46,16 +52,19 @@ return {
     -- you don't have to call setup
     require "makurai".setup({
       transparent = false, -- removes the bg color
+      cursor = false,      -- rather or not to modify the cursor color too, changes the `Cursor` highlight
     })
 
     vim.cmd.colorscheme("makurai_dark")
   end
 }
 ```
+
 <details>
 <summary>Overriding the palette </summary>
 
 > the below example "converts" makurai_dark into makurai_autumn
+
 ```lua
 require("makurai").modify("dark", {
   syntax = {
@@ -68,12 +77,14 @@ require("makurai").modify("dark", {
 })
 
 ```
+
 the options are everything in the palette [here](./lua/makurai/palettes/dark.lua)
 
 </details>
 
 ## Theme Philosophy
-The core philosophy behind this theme is minimal highlighting with maximum clarity. Instead of overwhelming the code with color, it uses **up to five distinct colors** to emphasize the most critical syntax elements, grouped by role:  
+
+The core philosophy behind this theme is minimal highlighting with maximum clarity. Instead of overwhelming the code with color, it uses **up to five distinct colors** to emphasize the most critical syntax elements, grouped by role:
 
 1. Orange – Keywords
 2. Yellow – Functions, methods, functions constructors..

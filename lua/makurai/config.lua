@@ -2,10 +2,12 @@ local M = {}
 
 ---@class Makurai.config
 ---@field transparent boolean
+---@field cursor boolean
 
 ---@type Makurai.config
 M.opts = {
   transparent = false,
+  cursor = false
 }
 
 ---@return Makurai.config opts
