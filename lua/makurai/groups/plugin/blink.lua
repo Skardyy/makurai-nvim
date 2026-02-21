@@ -31,7 +31,7 @@ function M.get(p)
     BlinkCmpItemAbbrMatch = { fg = p.syntax.type, bold = true },
     BlinkCmpItemAbbrMatchFuzzy = { fg = p.syntax.type },
     BlinkCmpItemAbbrDeprecated = { fg = p.syntax.comment, strikethrough = true },
-    BlinkCmpMenu = { fg = p.syntax.comment },
+    BlinkCmpMenu = { fg = p.editor.fg },
     BlinkCmpSignatureHelpBorder = { link = "FloatBorder" },
     BlinkCmpMenuBorder = { link = "FloatBorder" },
     BlinkCmpDocBorder = { link = "FloatBorder" },
