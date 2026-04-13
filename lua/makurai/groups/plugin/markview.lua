@@ -49,6 +49,8 @@ function M.get(p)
     MarkviewCheckboxUnchecked = { fg = p.diagnostic.error },
     MarkviewPalette0Fg = { link = "@markup.link.label.markdown_inline" },
     MarkviewBlockQuoteDefault = { link = "String" },
+    MarkviewTableHeader = { fg = p.editor.border },
+    MarkviewTableBorder = { fg = p.editor.border },
   }
 
   local start_color = p.editor.guide
