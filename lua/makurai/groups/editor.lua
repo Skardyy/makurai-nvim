@@ -46,7 +46,7 @@ function M.get(p, opts)
     ------------------------------
     DiffAdd = { bg = p.git.bg_add },
     DiffChange = { bg = p.git.bg_change },
-    DiffDelete = { bg = p.git.bg_delete, fg = p.git.bg_delete },
+    DiffDelete = { bg = p.git.bg_delete },
     DiffText = { bg = p.git.bg_text },
 
     ------------------------------
