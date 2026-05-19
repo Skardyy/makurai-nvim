@@ -3,11 +3,13 @@ local M = {}
 ---@class Makurai.config
 ---@field transparent boolean
 ---@field cursor boolean
+---@field highlight_only_method_def boolean
 
 ---@type Makurai.config
 M.opts = {
   transparent = false,
-  cursor = false
+  cursor = false,
+  highlight_only_method_def = false,
 }
 
 ---@return Makurai.config opts

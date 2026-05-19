@@ -51,8 +51,9 @@ return {
   config = function()
     -- you don't have to call setup
     require "makurai".setup({
-      transparent = false, -- removes the bg color
-      cursor = false,      -- rather or not to modify the cursor color too, changes the `Cursor` highlight
+      transparent = false,               -- removes the bg color
+      cursor = false,                    -- rather or not to modify the cursor color too, changes the `Cursor` highlight
+      highlight_only_method_def = false, -- when true, highlights only methods definition, not calls
     })
 
     vim.cmd.colorscheme("makurai_dark")

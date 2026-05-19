@@ -33,6 +33,20 @@ function M.load(p)
   merge(groups, require("makurai.groups.syntax").get(p))
   merge(groups, require("makurai.groups.editor").get(p, opts))
 
+  if opts.highlight_only_method_def then
+    -- treesitter: call sites
+    groups["@function.call"] = { link = "Identifier" }
+    groups["@function.method.call"] = { link = "Identifier" }
+    groups["@method.call"] = { link = "Identifier" }
+    -- LSP semantic tokens: base = call, declaration modifier = def
+    groups["@lsp.type.function"] = { link = "Identifier" }
+    groups["@lsp.type.method"] = { link = "Identifier" }
+    groups["@lsp.typemod.function.declaration"] = { link = "Function" }
+    groups["@lsp.typemod.method.declaration"] = { link = "Function" }
+    groups["@lsp.typemod.function.definition"] = { link = "Function" }
+    groups["@lsp.typemod.method.definition"] = { link = "Function" }
+  end
+
   local lang_modules = {
     "c",
     "css",
