@@ -58,7 +58,8 @@ function M.load(p)
     "toggleterm",
     "whichkey",
     "snacks",
-    "oil-git-status"
+    "oil-git-status",
+    "aerial",
   }
 
   for _, module_name in ipairs(plugin_modules) do
