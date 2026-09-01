@@ -3,12 +3,15 @@ local M = {}
 ---@param p Makurai.Palette
 function M.get(p)
   return {
-    typescriptFuncCallArg = { fg = p.editor.fg },
-    typescriptBraces = { fg = p.editor.fg },
-    tsxTagName = { fg = p.syntax.type },
-    tsxAttrib = { fg = p.syntax.fn },
-    typescriptArrowFunc = { fg = p.editor.fg },
-    typescriptArrayMethod = { fg = p.syntax.fn },
+    typescriptFuncCallArg   = { link = "Identifier" },
+    typescriptBraces        = { link = "Identifier" },
+    typescriptEndColons     = { link = "Identifier" },
+    typescriptArrowFunc     = { link = "Identifier" },
+    typescriptFuncTypeArrow = { link = "Identifier" },
+    tsxAttrib               = { link = "Function" },
+    typescriptArrayMethod   = { link = "Function" },
+    tsxTagName              = { link = "Type" },
+    typescriptMember        = { link = "Type" },
   }
 end
 
