@@ -8,6 +8,7 @@ function M.get(p)
     tsxTagName = { fg = p.syntax.type },
     tsxAttrib = { fg = p.syntax.fn },
     typescriptArrowFunc = { fg = p.editor.fg },
+    typescriptArrayMethod = { fg = p.syntax.fn },
   }
 end
 
