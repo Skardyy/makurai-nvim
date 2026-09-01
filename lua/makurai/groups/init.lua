@@ -54,6 +54,7 @@ function M.load(p)
     "markdown",
     "rust",
     "yaml",
+    "ts"
   }
 
   for _, module_name in ipairs(lang_modules) do
